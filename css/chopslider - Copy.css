@@ -1,0 +1,92 @@
+
+.wrapper {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width:400dp;
+	height:1050dp;
+	display:block;
+	padding-top:300dp;
+	padding-bottom:120dp;
+	z-index:2;
+}
+.wrapper2 {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20dp;
+	width:400dp;
+	height:950dp;
+	display:block;
+	z-index:2;
+	text-align:center;
+	padding-bottom:50dp;
+}
+
+/*---------- Slider ----------- */
+
+
+/*---------- Main Slider Container----------- */
+#slider {
+	width:400dp;
+	height:1050dp;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	z-index:2;
+	display:block;
+}
+/* Every slide must be hidden by default */
+.slide { display:none; width: 400dp; }
+
+/* 
+   And only the slide with "cs-activeSlide" class must be visible!
+   !Reserved Class name. Required class! 
+*/
+.cs-activeSlide { display:block; }
+
+/* Container with caption's text. Must be hidden */
+.slide-descriptions {
+	display:none;
+}
+
+/* Container with caption, must be hidden by default */
+.caption {
+    color: #56B7FB;
+    display: none;
+    position: absolute;
+    top: 100dp;
+	left: -60dp;
+    z-index: 3;
+	min-width:680dp;
+	font-size: 4em;
+	text-align:center
+}
+.full-3D {
+	right: 40dp;
+    top: 580dp;
+    width: 840dp;
+	height:20dp;
+}
+/* Container with Pagination buttons */
+.pagination {
+	bottom: 50dp;
+    left: 400dp;
+    margin-top: 50dp;
+    position: absolute;
+    text-align: center;
+}
+.slider-pagination {
+	display:inline-block;
+	width:15dp;
+	height:10dp;
+	background:url(../images/navi.png) no-repeat left bottom;
+	margin:0 10dp;
+	cursor:pointer;
+	position:relative;
+	z-index:200;
+}
+/* This is a required class for the "Active" pagination button. ! Reserved Class Name ! */
+.cs-active-pagination {
+	background:url(../images/navi.png) no-repeat left top;
+}
