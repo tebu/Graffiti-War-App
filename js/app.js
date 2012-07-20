@@ -1,7 +1,19 @@
+//TODO: Registration + Login
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 var socket;
+var protocol = new Protocol();
 
+//This should work only on the  browser
+$(document).ready(function(){
+	// Now safe to use the PhoneGap API
+		console.log("The device is ready.");
+		startWebsocket();
+});
+
+
+//This should work only on the  mobile
 
 function onDeviceReady() {
 // Now safe to use the PhoneGap API
@@ -12,21 +24,27 @@ function onDeviceReady() {
 
 
 
+
+
 var startWebsocket = function() {
 	
 	// new socket
 	console.log("Attempting to create a websocket...");
 	socket = new WebSocket('ws://vm0063.virtues.fi');
-
+	//socket = new WebSocket('ws://echo.websocket.org');
+	
 	// push a message after the connection is established.
 	socket.onopen = function() {
 		console.log("Connected to the websocket server");
+		var user = new User(1234567890, "pippo", "Yellowpants");
+		var msg = protocol.add(user);
+		socket.send(msg);
 		getLocation();
 	};
 
 	// alerts message pushed from server
 	socket.onmessage = function(msg) {
-	 alert(JSON.stringify(msg));
+		console.log(JSON.stringify(msg));
 	};
 	
 	
@@ -36,7 +54,7 @@ var startWebsocket = function() {
 
 	// alert close event
 	socket.onclose = function() {
-	 alert('closed');
+		alert('closed');
 	};
 
 	
