@@ -1,0 +1,105 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+
+<title>Street Art Gangs</title>
+<meta name="description" content="Street Art Gangs demo">
+<meta name="author" content="Team NIMO">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+
+<!-- jQuery-->
+<script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript"
+	src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
+
+
+<!-- Application models-->
+<script src="js/models/user.js"></script>
+<script src="js/models/localization.js"></script>
+<script src="js/models/venue.js"></script>
+<script src="js/models/team.js"></script>
+
+<!-- Application messaging protocol-->
+<script src="js/protocol.js"></script>
+<!-- Application logic-->
+<script src="js/app.js"></script>
+
+</head>
+
+<body>
+
+	<div data-role="page">
+		<div id="container_spray">
+
+			<div id="main">
+
+				<div id="spray-burst"></div>
+				<div id="spray-burst2"></div>
+				<div id="spray-can"></div>
+
+				<p id="tip">-- You may want to click the can --</p>
+
+
+
+
+				<audio id="beep-one" preload="auto">
+					<source src="sound/sound.mp3"></source>
+					<source src="sound/sound.ogg"></source>
+					Your browser isn't invited for super fun time.
+				</audio>
+
+
+
+
+
+
+
+				<!--Loader-->
+				<div id="loading">
+
+					<ul id="loadbar">
+						<li><div id="layerFill1" class="bar"></div></li>
+						<li><div id="layerFill2" class="bar"></div></li>
+						<li><div id="layerFill3" class="bar"></div></li>
+						<li><div id="layerFill4" class="bar"></div></li>
+						<li><div id="layerFill5" class="bar"></div></li>
+						<li><div id="layerFill6" class="bar"></div></li>
+						<li><div id="layerFill7" class="bar"></div></li>
+						<li><div id="layerFill8" class="bar"></div></li>
+						<li><div id="layerFill9" class="bar"></div></li>
+						<li><div id="layerFill10" class="bar"></div></li>
+						<li><div id="layerFill11" class="bar"></div></li>
+						<li><div id="layerFill12" class="bar"></div></li>
+						<li><div id="layerFill13" class="bar"></div></li>
+						<li><div id="layerFill14" class="bar"></div></li>
+						<li><div id="layerFill15" class="bar"></div></li>
+					</ul>
+
+				</div>
+
+				<p id="progress">Spraying in progress</p>
+				<p id="finished">Cool, it's done!</p>
+				<!--Loader ends-->
+
+				<ul class="buttons">
+					<li id="cancel"><a href="#"></a></li>
+					<li id="proceed"><a href="#"></a></li>
+				</ul>
+
+			</div>
+			<!--! end of #main -->
+
+		</div>
+		<!--! end of #container -->
+	</div>
+
+
+
+
+</body>
+</html>

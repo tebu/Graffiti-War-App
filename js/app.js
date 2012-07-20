@@ -2,13 +2,18 @@
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
+
+
+
 var socket;
 var protocol = new Protocol();
+var user = new User(1234567890, "pippo", "Yellowpants");
 
 //This should work only on the  browser
 $(document).ready(function(){
 	// Now safe to use the PhoneGap API
 		console.log("The device is ready.");
+		initializeEvents();
 		startWebsocket();
 });
 
@@ -18,10 +23,22 @@ $(document).ready(function(){
 function onDeviceReady() {
 // Now safe to use the PhoneGap API
 	console.log("The device is ready.");
+	initializeEvents();
 	startWebsocket();
 }
 
 
+/** Interaction events**/
+
+var initializeEvents = function() {
+
+
+	$('#slider').live("tap", function(){
+		spray();
+		$.mobile.changePage("spray.html");
+	});
+	
+}
 
 
 
@@ -36,25 +53,24 @@ var startWebsocket = function() {
 	// push a message after the connection is established.
 	socket.onopen = function() {
 		console.log("Connected to the websocket server");
-		var user = new User(1234567890, "pippo", "Yellowpants");
 		var msg = protocol.add(user);
 		socket.send(msg);
 		getLocation();
 	};
 
-	// alerts message pushed from server
 	socket.onmessage = function(msg) {
 		console.log(JSON.stringify(msg));
 	};
 	
-	
 	socket.onerror = function(err) {
-		 alert(err);
+		console.log(err);
 	};
-
+	
+	
 	// alert close event
 	socket.onclose = function() {
-		alert('closed');
+		var msg = protocol.remove(user);
+		socket.send(msg);
 	};
 
 	
@@ -64,7 +80,7 @@ var startWebsocket = function() {
 
 var getLocation = function() {
 	console.log("Getting device location...");
-	navigator.geolocation.getCurrentPosition(onGPSSuccess, onGPSError, {enableHighAccuracy: true});
+	wpid = navigator.geolocation.watchPosition(onGPSSuccess, onGPSError, {enableHighAccuracy: true});
 }
 
 
@@ -73,12 +89,15 @@ var onGPSError = function (err) {
 }
 
 var onGPSSuccess = function(pos) {
-	var myLat = pos.coords.latitude;
-	var myLon = pos.coords.longitude;
-	//var distance = haversine(myLon, myLat, venueObj.lon, venueObj.lat);
-	//console.log(distance);
-	console.log("I got the location!: Lat: " + myLat+ ", Lon: " +myLon);
-	getVenues(myLat, myLon);
+
+	var localization = new Localization(pos.coords.latitude, pos.coords.longitude);
+	console.log("I got the location!: Lat: " + localization.lat+ ", Lon: " +localization.lon);
+	
+	
+	var msg = protocol.move(user, localization);
+	socket.send(msg);
+	
+	getVenues(localization.lat, localization.lon);
 }
 
 
@@ -170,6 +189,43 @@ var getCategories = function(venues) {
 
 
 
+
+
+/** Spray.html **/
+
+
+
+var spray = function() {
+	
+	var venue = new Venue(12434, "Puistola");
+	var msg = protocol.spray(user, venue);
+	socket.send(msg);
+	
+	$("p#tip").delay(5000).fadeIn(500);
+	$("p#tip").delay(2000).fadeOut(500);
+	$("p#progress").delay(2000).fadeIn(1000);
+	$("p#progress").delay(8000).fadeOut(500);	
+	$("p#finished").delay(12000).fadeIn(1000);
+	
+	$("#cancel").delay(9000).fadeOut(200);
+	$("#proceed").css("display", "none");
+	$("#proceed").delay(13000).fadeIn(500);
+	$("#spray-burst").css("display", "none");
+	$("#spray-burst").fadeIn(10000);
+	$("#spray-burst2").css("display", "none");
+	$("#spray-burst2").fadeIn(10000);
+		
+	
+	$("#spray-can").click(function () {
+	      $(this).effect("shake", { times:10 }, 100);
+	});
+	
+	var beepOne = $("#beep-one")[0];
+	$("#spray-can")
+		.click(function () {
+			beepOne.play();
+		});
+}
 
 
 
