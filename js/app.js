@@ -32,10 +32,23 @@ function onDeviceReady() {
 
 var initializeEvents = function() {
 
+	$('#index').live('touchmove', function(event){
+		console.log("You ain't scroll!");
+		event.preventDefault();
+
+	});
+	$('#spray').live('touchmove', function(event){
+		console.log("You ain't scroll!");
+		event.preventDefault();
+	});
 
 	$('#slider').live("tap", function(){
-		spray();
 		$.mobile.changePage("spray.html");
+	});
+	
+	$('#spray').live("pagebeforeshow", function(){
+		console.log("PageChange Fired!");
+		spray();
 	});
 	
 }
