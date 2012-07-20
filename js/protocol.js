@@ -1,8 +1,6 @@
 var Protocol = function() {
 	
 	
-
-	
 	
 	Protocol.prototype.add = function(user) {
 		var msg = {};
@@ -35,7 +33,7 @@ var Protocol = function() {
 	
 	Protocol.prototype.move = function(user, localization) {
 		var msg = {};
-		var action = "add";
+		var action = "move";
 		var data = {};
 		data.user = user;
 		data.localization = localization;
@@ -51,7 +49,7 @@ var Protocol = function() {
 	
 	Protocol.prototype.spray = function(user, venue) {
 		var msg = {};
-		var action = "add";
+		var action = "spray";
 		var data = {};
 		data.user = user;
 		data.venue = venue;
