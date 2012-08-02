@@ -214,23 +214,18 @@ var spray = function() {
 	var msg = protocol.spray(user, venue);
 	socket.send(msg);
 	
-	$("p#tip").delay(5000).fadeIn(500);
-	$("p#tip").delay(2000).fadeOut(500);
 	$("p#progress").delay(2000).fadeIn(1000);
-	$("p#progress").delay(8000).fadeOut(500);	
-	$("p#finished").delay(12000).fadeIn(1000);
-	
-	$("#cancel").delay(9000).fadeOut(200);
+	$("p#progress").delay(14000).fadeOut(200);	
+	$("p#finished").delay(17000).fadeIn(1000);
+	$("#cancel").delay(15000).fadeOut(200);
 	$("#proceed").css("display", "none");
-	$("#proceed").delay(13000).fadeIn(500);
+	$("#proceed").delay(16000).fadeIn(500);
 	$("#spray-burst").css("display", "none");
-	$("#spray-burst").fadeIn(10000);
+	$("#spray-burst").delay(4000).fadeIn(10000);
 	$("#spray-burst2").css("display", "none");
-	$("#spray-burst2").fadeIn(10000);
-		
-	
+	$("#spray-burst2").delay(6000).fadeIn(10000);
 	$("#spray-can").click(function () {
-	      $(this).effect("shake", { times:10 }, 100);
+		  $(this).effect("shake", { times:10 }, 100);
 	});
 	
 	var beepOne = $("#beep-one")[0];
@@ -238,6 +233,13 @@ var spray = function() {
 		.click(function () {
 			beepOne.play();
 		});
+		
+	$(document).ready(function() {
+		$('.progress .bar').progressbar({
+			  transition_delay: 1500,
+			  display_text: 1
+		});          
+	});
 }
 
 
