@@ -555,7 +555,126 @@ input[type=submit]:active {
 }
 
 
+/* ==|== profile.html =====================================================
+  
+   ========================================================================== */
+#container_profile {	
+	background: url(../img/profile-bg.jpg) no-repeat;
+	width: 1280px;
+  	height: 1920px;
+	margin: 0 auto;	
+}
 
+#profile ul.buttons {
+	width: 1280px;
+}
+#profile ul.buttons li {
+	z-index: 10;
+	position: relative;
+	top: 200px;
+	float: left
+}
+#profile li#back {
+	background:url(../img/back.png) no-repeat;
+	width: 134px;
+	height: 134px;
+}
+#profile li#back:active, #profile li#gang:active {
+	top: 205px;
+}	
+#profile li#gang {
+	background:url(../img/gang-small.png) no-repeat;
+	width: 134px;
+	height: 134px;
+	float: right;
+	margin-right: 80px;
+}
+#profile-box {
+		position: relative;
+	top: 700px;
+}
+#profile h1 {
+	position: relative;
+	clear: both;
+	top: 20px;
+}
+p.profile-data {
+	position: relative;
+	top: 40px;
+	font-size: 3em;
+	text-align:center;
+}
+.name, .erased {
+	-moz-transform: skewY(5deg);
+	-webkit-transform: skewY(5deg);
+}
+.gang, .sprayed {
+	-moz-transform: skewY(-5deg);
+	-webkit-transform: skewY(-5deg);
+}
+
+.left-box {
+	width: 50%;
+	float:left;
+}
+.right-box {
+	width: 50%;
+	float:right;
+}
+
+p#profile-name, p#gang-name, p#tags-sprayed, p#tags-erased {
+	font-size: 2.5em;
+	text-align: center;
+	width: 400px;
+	margin: 70px auto 20px;
+	background: #A1A1D3;
+    line-height: 3em;
+	text-shadow: 0 1px 1px #25022D;
+}
+p#profile-name {
+	-moz-transform: skewY(5deg);
+	-webkit-transform: skewY(5deg);
+}
+p#gang-name {
+	-moz-transform: skewY(-5deg);
+	-webkit-transform: skewY(-5deg);
+}
+p#tags-sprayed {
+	-moz-transform: skewY(-5deg);
+	-webkit-transform: skewY(-5deg);
+}
+p#tags-erased {
+	-moz-transform: skewY(5deg);
+	-webkit-transform: skewY(5deg);
+}
+
+.speed-box {
+	position: relative;
+	top: 100px;
+	text-align:center;
+}
+
+.speed-box ol li {
+	font-size: 2.5em;
+ 	display: inline-block;
+	margin: 20px 40px;
+	padding: 20px;
+
+	border-bottom: 4px dashed #A1A1D3;
+
+	
+}
+.speed-box ol {
+}
+li.speed-achievement {
+	background: #D6269B;
+    width: 3em;
+	height: 3em;
+	border-radius:3em;
+	display: block;
+	line-height: 3em;
+	border: none !important
+}
 
 /*
  * Media queries for responsive design github.com/h5bp/mobile-boilerplate/wiki/The-Style
