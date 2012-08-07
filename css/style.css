@@ -490,6 +490,70 @@ p#finished {
 	display:none
 }
 
+/* ==|== login.html =====================================================
+  
+   ========================================================================== */
+
+#container_login {	
+	background: #a50079;
+	background: -moz-radial-gradient(center, ellipse cover,  #a50079 0%, #15266d 99%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#a50079), color-stop(99%,#15266d));
+	background: -webkit-radial-gradient(center, ellipse cover,  #a50079 0%,#15266d 99%);
+	background: -o-radial-gradient(center, ellipse cover,  #a50079 0%,#15266d 99%);
+	background: -ms-radial-gradient(center, ellipse cover,  #a50079 0%,#15266d 99%);
+	background: radial-gradient(ellipse at center,  #a50079 0%,#15266d 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a50079', endColorstr='#15266d',GradientType=1 );
+	width: 1280px;
+  	height: 1920px;
+	margin: 0 auto;	
+}
+div#login-box {
+    background: none;
+	width: 600px;
+   	height: 500px;
+   	position: absolute;
+   	left: 50%;
+   	top: 50%; 
+   	margin-left: -300px;
+   	margin-top: -150px;
+}
+input[type=text],input[type=password]{
+    color: #fff;
+    display: block;
+    font: 25px 'KomikaAxisRegular',Arial,sans-serif;
+    height: 100px;
+    left: 26px;
+    margin: 20px 0 60px;
+    outline: none;
+    width: 100%;
+	text-indent: 20px;	
+	background: #6D005A;
+	border: 1px solid #4B002D;
+    border-radius: 22px;
+	border-bottom: 20px solid #4B002D
+}
+div#login-box h2 {
+	font-size: 3em;
+	text-align:center;
+	color: #fff
+}
+input[type=submit]{		
+	width: 134px;
+	height:134px;
+	position:relative;
+	left: 220px;
+	cursor:pointer;
+	border:none;
+	color:#fff;
+	font:14px/36px 'KomikaAxisRegular','Segoe UI',Arial,sans-serif;
+	background: url(../img/login-proceed.png) no-repeat;
+	text-indent: -9999px;
+	position: relative;
+}
+input[type=submit]:active {
+	top: 5px
+}
+
 
 
 
