@@ -564,7 +564,6 @@ input[type=submit]:active {
   	height: 1920px;
 	margin: 0 auto;	
 }
-
 #profile ul.buttons {
 	width: 1280px;
 }
@@ -612,7 +611,6 @@ p.profile-data {
 	-moz-transform: skewY(-5deg);
 	-webkit-transform: skewY(-5deg);
 }
-
 .left-box {
 	width: 50%;
 	float:left;
@@ -621,7 +619,6 @@ p.profile-data {
 	width: 50%;
 	float:right;
 }
-
 p#profile-name, p#gang-name, p#tags-sprayed, p#tags-erased {
 	font-size: 2.5em;
 	text-align: center;
@@ -631,6 +628,7 @@ p#profile-name, p#gang-name, p#tags-sprayed, p#tags-erased {
     line-height: 3em;
 	text-shadow: 0 1px 1px #25022D;
 	border-left: 45px solid #8B8ACB;
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255,255,255,0.2)));
 }
 p#profile-name {
 	-moz-transform: skewY(5deg);
@@ -648,24 +646,18 @@ p#tags-erased {
 	-moz-transform: skewY(5deg);
 	-webkit-transform: skewY(5deg);
 }
-
 .speed-box {
 	position: relative;
 	top: 100px;
 	text-align:center;
 }
-
 .speed-box ol li {
 	font-size: 2.5em;
  	display: inline-block;
 	margin: 20px 40px;
 	padding: 20px;
-
 	border-bottom: 4px dashed #A1A1D3;
-
-	
-}
-.speed-box ol {
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255,255,255,0.2)))	
 }
 li.speed-achievement {
 	background: #D6269B;
