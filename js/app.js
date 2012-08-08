@@ -242,6 +242,27 @@ var spray = function() {
 	});
 }
 
+// Modal box for showing help etc.
+$(document).ready(function() {
+	$("#tip-trigger").leanModal({ top : 200, overlay : 0.8, closeButton: ".modal_close" });
+	$("#tip-trigger2").leanModal({ top : 200, overlay : 0.8, closeButton: ".modal_close" });
+});
+
+$(document).ready(function($) {
+       $('.accordion dd').hide();
+       $('.accordion dt a').click(function(){
+          if ($(this).hasClass('selected')) {
+               $(this).removeClass('selected');
+               $(this).parent().next().slideUp();
+          } else {
+               $('.accordion dt a').removeClass('selected');
+               $(this).addClass('selected');
+               $('.accordion dd').slideUp();
+               $(this).parent().next().slideDown();
+          }
+          return false;
+       });
+});
 
 
 /** Utilities ***/

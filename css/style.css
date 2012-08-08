@@ -229,7 +229,7 @@ td { vertical-align: top; }
 
 
    
-   
+
 body { background: #000; color: #ffffff; font-family:'KomikaAxisRegular'; }
 h1, h2, h3 { text-align: center; font-family:'KomikaAxisRegular'; text-shadow: 2px 4px 2px #000; letter-spacing: 0; }
 h2, h3 { font-family:'SFArchRivalBold'; }
@@ -566,11 +566,12 @@ input[type=submit]:active {
 }
 #profile ul.buttons {
 	width: 1280px;
+	margin: 0
 }
 #profile ul.buttons li {
 	z-index: 10;
 	position: relative;
-	top: 200px;
+	top: 100px;
 	float: left
 }
 #profile li#back {
@@ -589,27 +590,24 @@ input[type=submit]:active {
 	margin-right: 80px;
 }
 #profile-box {
-		position: relative;
-	top: 700px;
+	position: relative;
+	top: 450px;
+	clear: both;
 }
 #profile h1 {
-	position: relative;
-	clear: both;
-	top: 20px;
+   	left: 50%;
+    margin-left: -300px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 600px;
 }
 p.profile-data {
 	position: relative;
-	top: 40px;
+	top: 0;
 	font-size: 3em;
 	text-align:center;
-}
-.name, .erased {
-	-moz-transform: skewY(5deg);
-	-webkit-transform: skewY(5deg);
-}
-.gang, .sprayed {
-	-moz-transform: skewY(-5deg);
-	-webkit-transform: skewY(-5deg);
 }
 .left-box {
 	width: 50%;
@@ -620,47 +618,46 @@ p.profile-data {
 	float:right;
 }
 p#profile-name, p#gang-name, p#tags-sprayed, p#tags-erased {
-	font-size: 2.5em;
+	font-size: 3.5em;
+	font-family:'SFArchRivalBold';
 	text-align: center;
 	width: 400px;
-	margin: 70px auto 20px;
+	margin: 10px auto 20px;
 	background: #A1A1D3;
     line-height: 3em;
 	text-shadow: 0 1px 1px #25022D;
 	border-left: 45px solid #8B8ACB;
 	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255,255,255,0.2)));
 }
-p#profile-name {
+p#profile-name, p#gang-name, .name, .gang  {
 	-moz-transform: skewY(5deg);
 	-webkit-transform: skewY(5deg);
 }
-p#gang-name {
+p#tags-sprayed, p#tags-erased, .sprayed, .erased {
 	-moz-transform: skewY(-5deg);
 	-webkit-transform: skewY(-5deg);
 }
-p#tags-sprayed {
-	-moz-transform: skewY(-5deg);
-	-webkit-transform: skewY(-5deg);
-}
-p#tags-erased {
-	-moz-transform: skewY(5deg);
-	-webkit-transform: skewY(5deg);
+.achievement-box {
+	position: relative;
+	top: 80px;
+	text-align:center;
 }
 .speed-box {
 	position: relative;
-	top: 100px;
+	top: 80px;
 	text-align:center;
 }
 .speed-box ol li {
 	font-size: 2.5em;
+	font-family:'SFArchRivalBold';
  	display: inline-block;
-	margin: 20px 40px;
+	margin: 10px 40px;
 	padding: 20px;
 	border-bottom: 4px dashed #A1A1D3;
 	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255,255,255,0.2)))	
 }
 li.speed-achievement {
-	background: #D6269B;
+	background: #E4A514;
     width: 3em;
 	height: 3em;
 	border-radius:3em;
@@ -668,6 +665,95 @@ li.speed-achievement {
 	line-height: 3em;
 	border: none !important
 }
+#tips, #tips2 {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    width: 600px;
+    border: 14px solid #FEE3D6;
+    padding: 20px;
+    display: none;
+    color: #F7ECE6;
+    font-size: 2em;
+    box-shadow: 0 0 20px #150800;
+	text-shadow: 0 1px 1px #2F2F2F;
+}
+#tips { 
+	background: #E4A514;
+}
+#tips2 { 
+	background: #CF2C9D;
+}
+#tips dt { 
+	background: #B57F13;
+}
+#tips2 dt { 
+	background: #4E062C;
+}
+#tips h4, #tips2 h4 { font-size: 1.5em }
+#tips a, , #tips2 a { text-decoration: none;}
+#lean_overlay {
+    background: #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+a#tip-trigger2 {
+    background: #CF2C9D;
+    border: none !important;
+    border-radius: 100px;
+    display: block;
+    height: 200px;
+	width: 200px;
+    line-height: 200px;
+    margin: 0 auto;
+    text-align: center;
+	font-size: 3em;
+	font-family:'SFArchRivalBold';
+	text-decoration: none
+}
+a#tip-trigger2 span{
+	color: #111
+}
+#tips span {
+	color: #662710;
+	text-shadow: 0 1px 2px #fff;
+}
+
+/*Accordion*/
+.accordion { margin: 50px; position:relative }
+dt,
+dd { padding: 10px; }
+dd { padding-bottom: 25px; font-family:'SFArchRivalBold'; }
+dd:last-child { padding-bottom: 5px }
+dt {
+    background: #662710;
+    margin-bottom: 10px;
+	border: none;
+	position:relative
+}
+dt:active { background: #762F15 }
+.accordion a {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+	text-decoration: none
+}
+span.check {
+	position:absolute;
+	top: 0;
+	right: 0;
+	background: #27A481;
+	padding: 10px
+}
+
+
+
 
 /*
  * Media queries for responsive design github.com/h5bp/mobile-boilerplate/wiki/The-Style
