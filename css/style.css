@@ -630,6 +630,7 @@ p#profile-name, p#gang-name, p#tags-sprayed, p#tags-erased {
 	background: #A1A1D3;
     line-height: 3em;
 	text-shadow: 0 1px 1px #25022D;
+	border-left: 45px solid #8B8ACB;
 }
 p#profile-name {
 	-moz-transform: skewY(5deg);
