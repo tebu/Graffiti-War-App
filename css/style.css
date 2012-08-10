@@ -752,7 +752,129 @@ span.check {
 	padding: 10px
 }
 
-
+/* ==|== gang.html =====================================================
+  
+   ========================================================================== */
+#container_gang {	
+	background: #E68C00 url(../img/gang-bg.jpg) no-repeat;
+	width: 1280px;
+  	height: 1920px;
+	margin: 0 auto;	
+}
+#gang ul.buttons {
+	width: 1280px;
+	margin: 0
+}
+#gang ul.buttons li {
+	z-index: 10;
+	position: relative;
+	top: 100px;
+	float: left
+}
+#gang li#back {
+	background:url(../img/gang-back.png) no-repeat;
+	width: 134px;
+	height: 156px;
+}
+#gang li#back:active, #gang li#gang:active {
+	top: 105px;
+}	
+#gang li#gang {
+	background:url(../img/profile-small.png) no-repeat;
+	width: 134px;
+	height: 156px;
+	float: right;
+	margin-right: 80px;
+}
+#graffiti-box {
+	width: 670px;
+	height: 410px;
+	position: absolute;
+	top: 250px;
+	clear: both;
+	margin-left: -335px;
+	left: 50%
+}
+#gang-box {
+	position: relative;
+	top: 580px;
+	clear: both;
+}
+#gang h1 {
+   	left: 50%;
+    margin-left: -300px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 600px;
+	color: #FEC100;
+}
+p.gang-data {
+	position: relative;
+	top: 0;
+	font-size: 3em;
+	text-align:center;
+	text-shadow: 0 5px 5px #713901;
+}
+p#gang-name, p#members, p#gang-tags-sprayed, p#gang-tags-erased, p#gang-master, p#gang-recent {
+	font-size: 3.5em;
+	font-family:'SFArchRivalBold';
+	text-align: center;
+	width: 400px;
+	margin: 10px auto 20px;
+	background: #FFB333;
+    line-height: 3em;
+	text-shadow: 0 1px 1px #25022D;
+	border-left: 45px solid #FFD259;
+	border-top: 20px solid #FBEBB0;
+	box-shadow: 15px -10px 1px #8E2600;
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255,255,255,0.2)));
+}
+p#gang-name, p#members, .members, .gang  {
+	-moz-transform: skewY(5deg);
+	-webkit-transform: skewY(5deg);
+}
+p#gang-tags-sprayed, p#gang-tags-erased, .sprayed, .erased {
+	-moz-transform: skewY(-5deg);
+	-webkit-transform: skewY(-5deg);
+}
+span#sprayed-avg:before, span#erased-avg:before {
+	content:"avg";
+	padding: 5px;
+	background: #CC6207;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+span#sprayed-avg, span#erased-avg, span#ranking {
+    background: none repeat scroll 0 0 #F28B26;
+    border: 3px dashed #FFFFFF;
+    font-size: 0.7em;
+    padding: 10px;
+	margin-left: 20px
+}
+.leader-box {
+	position: relative;
+	top: 50px;
+	text-align:center;
+	float:left;
+	left: 10%
+}
+.recently-joined-box {
+	position: relative;
+	top: 40px;
+	text-align:center;
+	float: right;
+	right: 10%
+}
+.ranking-box {
+	clear: both;
+	position: relative;
+	top: 100px;
+	text-align:center;
+	font-size: 6em;
+	text-shadow: 0 2px 2px #111
+}
 
 
 /*
