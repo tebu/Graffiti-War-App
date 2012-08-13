@@ -817,7 +817,7 @@ p.gang-data {
 	text-align:center;
 	text-shadow: 0 5px 5px #713901;
 }
-p#gang-name, p#members, p#gang-tags-sprayed, p#gang-tags-erased, p#gang-master, p#gang-recent {
+p#gang-name-gang, p#members, p#gang-tags-sprayed, p#gang-tags-erased, p#gang-master, p#gang-recent {
 	font-size: 3.5em;
 	font-family:'SFArchRivalBold';
 	text-align: center;
