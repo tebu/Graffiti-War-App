@@ -227,6 +227,18 @@ td { vertical-align: top; }
 
 }
 
+@font-face {
+    font-family: 'KomikaDisplayRegular';
+    src: url('../js/fonts/komika_display/Komika_display-webfont.eot');
+    src: url('../js/fonts/komika_display/Komika_display-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../js/fonts/komika_display/Komika_display-webfont.woff') format('woff'),
+         url('../js/fonts/komika_display/Komika_display-webfont.ttf') format('truetype'),
+         url('../js/fonts/komika_display/Komika_display-webfont.svg#KomikaDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
    
 
@@ -875,6 +887,129 @@ span#sprayed-avg, span#erased-avg, span#ranking {
 	font-size: 6em;
 	text-shadow: 0 2px 2px #111
 }
+
+
+/* ==|== leaderboard.html =====================================================
+  
+   ========================================================================== */
+#container_leaderboard {	
+	background: #E68C00 url(../img/bg-leaderboard.jpg) no-repeat;
+	width: 1280px;
+  	height: 1920px;
+	margin: 0 auto;	
+	color: #fff;
+	font-family:'KomikaDisplayRegular';
+	text-shadow: 0 1px 2px #111
+}
+
+a#back {
+	width: 134px;
+	height: 156px;
+	position: relative;
+	top: 100px;
+	left: 50px
+}
+back:active {
+	top: 115px;
+}	
+#ranking li#gang {
+	background:url(../img/profile-small.png) no-repeat;
+	width: 134px;
+	height: 156px;
+	float: right;
+	margin-right: 80px;
+}
+#ranking {
+	position:relative;
+	top: 500px;
+}
+/* tables */
+table.tablesorter {
+	margin:10px 0pt 15px;
+	width: 100%;
+	text-align: left;
+	border: 4px solid #FFD85B;
+}
+table.tablesorter tr {
+	font-size: 3em;
+}
+table.tablesorter td {
+	 padding: 15px 0 15px 30px !important;
+	  border-right: 4px solid #FFD85B;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	border-right: 4px solid #FFD85B;
+	border-bottom: 4px solid #FFD85B;
+	font-size: 1.6em;
+	padding: 30px;
+	font-family: 'KomikaAxisRegular'
+}
+table.tablesorter thead tr .header {
+	background: #ff7d24;
+	background: -moz-linear-gradient(top,  #ff7d24 0%, #ff7d24 27%, #ffc74e 72%, #ff7d24 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff7d24), color-stop(27%,#ff7d24), color-stop(72%,#ffc74e), color-stop(100%,#ff7d24));
+	background: -webkit-linear-gradient(top,  #ff7d24 0%,#ff7d24 27%,#ffc74e 72%,#ff7d24 100%);
+	background: -o-linear-gradient(top,  #ff7d24 0%,#ff7d24 27%,#ffc74e 72%,#ff7d24 100%);
+	background: -ms-linear-gradient(top,  #ff7d24 0%,#ff7d24 27%,#ffc74e 72%,#ff7d24 100%);
+	background: linear-gradient(to bottom,  #ff7d24 0%,#ff7d24 27%,#ffc74e 72%,#ff7d24 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d24', endColorstr='#ff7d24',GradientType=0 );
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	padding: 4px;
+	vertical-align: top;
+}
+table.tablesorter tbody tr#my-gang td {
+	background-color:#A64D00;
+}
+table.tablesorter thead {
+	background: #E68033;
+}
+tr.odd {
+	background: #f4b624;
+	background: -moz-linear-gradient(top,  #f4b624 51%, #ffc74e 52%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#f4b624), color-stop(52%,#ffc74e));
+	background: -webkit-linear-gradient(top,  #f4b624 51%,#ffc74e 52%);
+	background: -o-linear-gradient(top,  #f4b624 51%,#ffc74e 52%);
+	background: -ms-linear-gradient(top,  #f4b624 51%,#ffc74e 52%);
+	background: linear-gradient(to bottom,  #f4b624 51%,#ffc74e 52%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4b624', endColorstr='#ffc74e',GradientType=0 );
+	box-shadow: 0 0 3px #BC7E03 inset;
+}
+tr.even {
+	background: #f79525;
+	background: -moz-linear-gradient(top,  #f79525 51%, #ffaf4f 52%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#f79525), color-stop(52%,#ffaf4f));
+	background: -webkit-linear-gradient(top,  #f79525 51%,#ffaf4f 52%);
+	background: -o-linear-gradient(top,  #f79525 51%,#ffaf4f 52%);
+	background: -ms-linear-gradient(top,  #f79525 51%,#ffaf4f 52%);
+	background: linear-gradient(to bottom,  #f79525 51%,#ffaf4f 52%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f79525', endColorstr='#ffaf4f',GradientType=0 );
+}
+table.tablesorter thead tr .header {
+    background-image: url(../img/table-sorter.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../img/table-asc.png);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../img/table-desc.png);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	background-color: #DC923F;
+}
+th.header {
+	text-align: left;
+}
+
+
+
+
+
 
 
 /*

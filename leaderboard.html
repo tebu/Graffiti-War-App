@@ -30,6 +30,9 @@
 <!-- LeanModal-->
 <script src="js/libs/jquery.leanModal.min.js"></script>
 
+<!-- TableSorter-->
+<script src="js/libs/jquery.tablesorter.js"></script> 
+
 </head>
 
 <body>
@@ -39,14 +42,92 @@
 
 			<div id="main" role="main">
             
-              <h1>Leaderboard</h1> 
-            	<ul class="buttons">
-					<li id="back"><a href="#"></a></li>
-					<li id="gang"><a href="#"></a></li>
-				</ul>
-                
+            <a href="#" id="back"><img src="img/gang-back.png"></a>
+            
+              <div id="ranking"> 
 
-                                      
+					
+
+                
+                    <table id="myTable" class="tablesorter"> 
+                    <thead> 
+                    <tr> 
+                        <th class="header">#</th> 
+                        <th class="header">Gang</th> 
+                        <th class="header">Tags</th> 
+                        <th class="header">Erased</th> 
+                    </tr> 
+                    </thead> 
+                    <tbody> 
+                    <tr class="odd"> 
+                        <td>01.</td> 
+                        <td>Kadunvaltaajat</td> 
+                        <td>0205</td> 
+                        <td>0147</td> 
+                    </tr> 
+                    <tr class="even"> 
+                        <td>02.</td> 
+                        <td>Taistelutoverit</td> 
+                        <td>0191</td> 
+                        <td>0135</td> 
+                    </tr> 
+                    <tr class="odd"> 
+                        <td>03.</td> 
+                        <td>Kannuttajat</td> 
+                        <td>0189</td> 
+                        <td>0139</td> 
+                    </tr> 
+                    <tr class="even"> 
+                        <td>04.</td> 
+                        <td>New Wave</td> 
+                        <td>0184</td> 
+                        <td>0111</td> 
+                    </tr>
+                    <tr class="odd"> 
+                        <td>05.</td> 
+                        <td>The Rebels</td> 
+                        <td>0172</td> 
+                        <td>0099</td> 
+                    </tr> 
+                    <tr class="even"> 
+                        <td>06.</td> 
+                        <td>TagzCrew</td> 
+                        <td>0144</td> 
+                        <td>0104</td> 
+                    </tr> 
+                    <tr class="odd"> 
+                        <td>07.</td> 
+                        <td>Kings_of_Graffities</td> 
+                        <td>0143</td> 
+                        <td>0074</td> 
+                    </tr> 
+                    <tr class="even"> 
+                        <td>08.</td> 
+                        <td>theElementz</td> 
+                        <td>0129</td> 
+                        <td>0100</td> 
+                    </tr>
+                    <tr class="odd"> 
+                        <td>09.</td> 
+                        <td>StreetArtKings</td> 
+                        <td>0114</td> 
+                        <td>0039</td> 
+                    </tr> 
+                    <tr class="even"> 
+                        <td>10.</td> 
+                        <td>Tags Master Squad</td> 
+                        <td>0107</td> 
+                        <td>0110</td> 
+                    </tr> 
+                    <tr class="odd" id="my-gang"> 
+                        <td>22.</td> 
+                        <td>My Gang</td> 
+                        <td>0096</td> 
+                        <td>0056</td> 
+                    </tr>   
+                    </tbody> 
+                    </table> 
+                 </div>                     
               
 			        
 			</div>
