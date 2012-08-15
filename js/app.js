@@ -268,10 +268,18 @@ $(document).ready(function() {
     // call the tablesorter plugin 
     $("table").tablesorter({ 
         // sort on the first column and third column, order asc 
-        sortList: [[0,0]] 
+        sortList: [[0,0]] ,
+		 headers: { 1: { sorter: false} }
     }); 
 });
 
+
+$(document).ready(function() { 
+			$(window).load(function(){
+				$("#content_1,#content_2").mCustomScrollbar({
+				});
+    }); 
+});
 
 /** Utilities ***/
 
