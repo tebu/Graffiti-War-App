@@ -274,12 +274,11 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() { 
-			$(window).load(function(){
-				$("#content_1,#content_2").mCustomScrollbar({
-				});
-    }); 
+$(document).bind("mobileinit", function() {
+  $.support.touchOverflow = true;
+  $.mobile.touchOverflowEnabled = true;
 });
+
 
 /** Utilities ***/
 
