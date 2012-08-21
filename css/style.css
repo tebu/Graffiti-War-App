@@ -899,7 +899,7 @@ span#sprayed-avg, span#erased-avg, span#ranking {
 	margin: 0 auto;	
 	color: #fff;
 	font-family:'KomikaDisplayRegular';
-	text-shadow: 0 1px 2px #111
+	text-shadow: 0 1px 2px #111;
 }
 a#back {
 	width: 134px;
@@ -1192,11 +1192,70 @@ li#gangs-total:before {
 }
 /*.mCSB_scrollTools {
 	opacity: 0 !important;
+}*/
+.recognition {
+	width: 30%;
+	background: #f7f01b;
+	background: -moz-radial-gradient(center, ellipse cover,  #FFFA7D 0%, #de7d00 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#FFFA7D), color-stop(100%,#de7d00));
+	background: -webkit-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
+	background: radial-gradient(ellipse at center,  #FFFA7D 0%,#de7d00 100%);
+	float: left;
+	margin: 150px 0;
+	height: 220px;
+	border-bottom: 11px solid #CC8318;
+    box-shadow: 0 25px 1px #90590A;
+}
+#gotd {
+	margin-left: 5%;
+}
+#potd {
+	margin-right: 5%
+}
+.recognition #badge {
+	width: 40%
+}
+.recognition h3 {
+	color: #fff;
+	margin: 10px 0;
+	text-shadow: 2px 4px 2px #6C3D01;
+}
+#badge {
+	background: url(../img/badge.png) center no-repeat;
+}
+.recognition p {
+	font-size: 2.5em;
+	text-align: center
+}
+#gang-of-the-day-count-tags, #player-of-the-day-count-tags {
+	background: #ff8e44;
+	background: -moz-linear-gradient(-45deg,  #ff8e44 48%, #ff7644 50%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#ff8e44), color-stop(50%,#ff7644));
+	background: -webkit-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
+	background: -o-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
+	background: -ms-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
+	background: linear-gradient(135deg,  #ff8e44 48%,#ff7644 50%);
+	border: 3px solid #FFAD77;
+	padding: 5px
+}
+#gang-of-the-day-count-erased, #player-of-the-day-count-erased {
+	background: #ffcd5b;
+	background: -moz-linear-gradient(-45deg,  #ffcd5b 48%, #ffc05b 50%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#ffcd5b), color-stop(50%,#ffc05b));
+	background: -webkit-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
+	background: -o-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
+	background: -ms-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
+	background: linear-gradient(135deg,  #ffcd5b 48%,#ffc05b 50%);
+	border: 3px solid #FFD169;
+	padding: 5px
 }
 
 
 
-*/
+
+
 
 /*
  * Media queries for responsive design github.com/h5bp/mobile-boilerplate/wiki/The-Style
