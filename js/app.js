@@ -274,6 +274,22 @@ $(document).ready(function() {
 });
 
 
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('scroller-wrapper');
+}
+
+var myScroll2;
+function loaded2() {
+	myScroll2 = new iScroll('scroller-wrapper2');
+}
+
+$( '#leaderboard-gangs' ).live( 'pagebeforeshow',loaded);
+
+$( '#leaderboard-players' ).live( 'pagebeforeshow',loaded2);
+
+
+
 $(document).bind("mobileinit", function() {
   $.support.touchOverflow = true;
   $.mobile.touchOverflowEnabled = true;

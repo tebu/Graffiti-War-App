@@ -889,7 +889,103 @@ span#sprayed-avg, span#erased-avg, span#ranking {
 }
 
 
-/* ==|== leaderboard.html =====================================================
+/* ==|== leaderboard-menu.html =====================================================
+  
+   ========================================================================== */
+.container_leaderboard-menu {	
+	background: #E68C00 url(../img/bg-leaderboardd.jpg) no-repeat;
+	background: rgb(255,236,72);
+	background: -moz-linear-gradient(-45deg,  rgba(255,236,72,1) 0%, rgba(180,66,0,1) 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,236,72,1)), color-stop(100%,rgba(180,66,0,1)));
+	background: -webkit-linear-gradient(-45deg,  rgba(255,236,72,1) 0%,rgba(180,66,0,1) 100%);
+	background: -o-linear-gradient(-45deg,  rgba(255,236,72,1) 0%,rgba(180,66,0,1) 100%);
+	background: -ms-linear-gradient(-45deg,  rgba(255,236,72,1) 0%,rgba(180,66,0,1) 100%);
+	background: linear-gradient(135deg,  rgba(255,236,72,1) 0%,rgba(180,66,0,1) 100%);
+	width: 1280px;
+  	height: 1920px;
+	margin: 0 auto;	
+	color: #fff;
+	font-family:'KomikaDisplayRegular';
+	text-shadow: 0 1px 2px #111;
+}
+a#back {
+	width: 134px;
+	height: 156px;
+	position: relative;
+	top: 100px;
+	left: 50px
+}
+#fame {
+	position: relative;
+}
+#badge {
+	background: url(../img/badge-big.png) center no-repeat;
+    height: 1154px;
+	width: 1107px;
+    position: absolute;
+	top: 179px;
+	left: 100px
+}
+.recognition {
+	background: #f7f01b;
+	background: -moz-radial-gradient(center, ellipse cover,  #FFFA7D 0%, #de7d00 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#FFFA7D), color-stop(100%,#de7d00));
+	background: -webkit-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
+	background: radial-gradient(ellipse at center,  #FFFA7D 0%,#de7d00 100%);
+    border: 10px solid #FFDB69;
+    box-shadow: 0 5px 0 #A76607;
+    position: relative;
+    top: 450px;
+
+    z-index: 1000;
+}
+#gotd {
+	margin-bottom: 50px
+}
+#potd {
+
+
+}
+.recognition #badge {
+	width: 40%
+}
+.recognition h3 {
+	color: #fff;
+	margin: 10px 0;
+	text-shadow: 2px 4px 2px #6C3D01;
+	font-size: 5em
+}
+.recognition p {
+	font-size: 2.5em;
+	text-align: center
+}
+#gang-of-the-day-count-tags, #player-of-the-day-count-tags {
+	background: #ff8e44;
+	background: -moz-linear-gradient(-45deg,  #ff8e44 48%, #ff7644 50%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#ff8e44), color-stop(50%,#ff7644));
+	background: -webkit-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
+	background: -o-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
+	background: -ms-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
+	background: linear-gradient(135deg,  #ff8e44 48%,#ff7644 50%);
+	border: 3px solid #FFAD77;
+	padding: 5px
+}
+#gang-of-the-day-count-erased, #player-of-the-day-count-erased {
+	background: #ffcd5b;
+	background: -moz-linear-gradient(-45deg,  #ffcd5b 48%, #ffc05b 50%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#ffcd5b), color-stop(50%,#ffc05b));
+	background: -webkit-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
+	background: -o-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
+	background: -ms-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
+	background: linear-gradient(135deg,  #ffcd5b 48%,#ffc05b 50%);
+	border: 3px solid #FFD169;
+	padding: 5px
+}
+
+
+/* ==|== leaderboard-gangs.html & leaderboard-players.html =====================================================
   
    ========================================================================== */
 .container_leaderboard {	
@@ -1030,7 +1126,7 @@ ul#attendance li {
     background: #E68033;
     border: 10px solid #FFD85B;
     display: inline-block;
-    padding: 20px;
+    padding: 40px;
     width: 300px;
 	margin: 0 10px;
 }
@@ -1194,74 +1290,22 @@ li#gangs-total:before {
 	opacity: 0 !important;
 	display: none
 }
-.recognition {
-	width: 30%;
-	background: #f7f01b;
-	background: -moz-radial-gradient(center, ellipse cover,  #FFFA7D 0%, #de7d00 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#FFFA7D), color-stop(100%,#de7d00));
-	background: -webkit-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
-	background: -o-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
-	background: -ms-radial-gradient(center, ellipse cover,  #FFFA7D 0%,#de7d00 100%);
-	background: radial-gradient(ellipse at center,  #FFFA7D 0%,#de7d00 100%);
-	float: left;
-	margin: 150px 0;
-	height: 220px;
-	border-bottom: 11px solid #CC8318;
-    box-shadow: 0 25px 1px #FFD85B;
-}
-#gotd {
-	margin-left: 5%;
-}
-#potd {
-	margin-right: 5%
-}
-.recognition #badge {
-	width: 40%
-}
-.recognition h3 {
-	color: #fff;
-	margin: 10px 0;
-	text-shadow: 2px 4px 2px #6C3D01;
-}
-#badge {
-	background: url(../img/badge.png) center no-repeat;
-}
-.recognition p {
-	font-size: 2.5em;
-	text-align: center
-}
-#gang-of-the-day-count-tags, #player-of-the-day-count-tags {
-	background: #ff8e44;
-	background: -moz-linear-gradient(-45deg,  #ff8e44 48%, #ff7644 50%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#ff8e44), color-stop(50%,#ff7644));
-	background: -webkit-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
-	background: -o-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
-	background: -ms-linear-gradient(-45deg,  #ff8e44 48%,#ff7644 50%);
-	background: linear-gradient(135deg,  #ff8e44 48%,#ff7644 50%);
-	border: 3px solid #FFAD77;
-	padding: 5px
-}
-#gang-of-the-day-count-erased, #player-of-the-day-count-erased {
-	background: #ffcd5b;
-	background: -moz-linear-gradient(-45deg,  #ffcd5b 48%, #ffc05b 50%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#ffcd5b), color-stop(50%,#ffc05b));
-	background: -webkit-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
-	background: -o-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
-	background: -ms-linear-gradient(-45deg,  #ffcd5b 48%,#ffc05b 50%);
-	background: linear-gradient(135deg,  #ffcd5b 48%,#ffc05b 50%);
-	border: 3px solid #FFD169;
-	padding: 5px
-}
-
 #scroller-wrapper {
 	position:relative; z-index:1;
 	top:45px; bottom:48px; left:0;
 	width:100%;
 	background:#D88E21;
 	overflow:auto;
-	height: 900px;
+	height: 1085px;
 }
-
+#scroller-wrapper2 {
+	position:relative; z-index:1;
+	top:45px; bottom:48px; left:0;
+	width:100%;
+	background:#D88E21;
+	overflow:auto;
+	height: 1085px;
+}
 #scroller {
 	position:absolute; z-index:1;
 /*	-webkit-touch-callout:none;*/
@@ -1269,51 +1313,6 @@ li#gangs-total:before {
 	width:100%;
 	padding:0;
 }
-
-/**
- *
- * Vertical Scrollbar
- *
- */
-.custom-scrollbar {
-	position:absolute;
-	z-index:100;
-	width:8px;bottom:7px;top:2px;right:1px
-}
-
-.custom-scrollbar > div {
-	position:absolute;
-	z-index:100;
-	width:100%;
-
-	/* The following is probably what you want to customize */
-	background:-webkit-gradient(linear, 0 0, 100% 0, from(#f00), to(#900));
-	background-image:-moz-linear-gradient(top, #f00, #900);
-	background-image:-o-linear-gradient(top, #f00, #900);
-
-	border:21px solid #900;
-
-	-webkit-background-clip:padding-box;
-	-moz-background-clip:padding-box;
-	-o-background-clip:padding-box;
-	background-clip:padding-box;
-	
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-o-box-sizing:border-box;
-	box-sizing:border-box;
-	
-	-webkit-border-radius:4px;
-	-moz-border-radius:4px;
-	-o-border-radius:4px;
-	border-radius:4px;
-	
-	-webkit-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
-	-moz-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
-	-o-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
-	box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
-}
-
 
 
 

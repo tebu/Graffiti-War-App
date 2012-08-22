@@ -10,11 +10,20 @@
 
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="css/jquery.mobile-1.1.1.css">
 
 <!-- jQuery-->
 <script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
+
+<!-- jQuery Mobile-->
+<script src="js/libs/jquery.mobile-1.1.1.js"></script>
+
+<!-- iScroll-->
+<script type="text/javascript" src="js/libs/iscroll.js"></script>
+
+<!-- TableSorter-->
+<script src="js/libs/jquery.tablesorter.js"></script>
 
 <!-- Application models-->
 <script src="js/models/user.js"></script>
@@ -27,62 +36,7 @@
 <!-- Application logic-->
 <script src="js/app.js"></script>
 
-<!-- LeanModal-->
-<script src="js/libs/jquery.leanModal.min.js"></script>
 
-<!-- TableSorter-->
-<script src="js/libs/jquery.tablesorter.js"></script>
-
-
-<!--<script src="js/libs/jquery.mousewheel.min.js"></script>
-
-<script src="js/libs/jquery.mCustomScrollbar.js"></script>-->
-
-
-
-<!--<script src="js/libs/jquery.nicescroll.js"></script>-->
-
-<script type="text/javascript" src="js/libs/iscroll.js"></script>
-
-<script type="text/javascript">
-
-var myScroll;
-function loaded() {
-	myScroll = new iScroll('scroller-wrapper');
-}
-
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-/* * * * * * * *
- *
- * Use this for high compatibility (iDevice + Android)
- *
- */
-document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
-/*
- * * * * * * * */
-
-
-/* * * * * * * *
- *
- * Use this for iDevice only
- *
- */
-//document.addEventListener('DOMContentLoaded', loaded, false);
-/*
- * * * * * * * */
-
-
-/* * * * * * * *
- *
- * Use this if nothing else works
- *
- */
-//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
-/*
- * * * * * * * */
-
-</script>
 
 
 </head>
@@ -94,12 +48,9 @@ document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 2
 
 			<div id="main" role="main">
             
-            <a href="index.html" id="back" data-transition="slide"><img src="img/gang-back.png"></a>
+            <a href="leaderboard-menu.html" id="back" data-transition="slide"><img src="img/gang-back.png"></a>
             
-            <ul id="attendance">
-            	<a href="leaderboard-players.html"><li id="players-total" class="total">1,003</li></a>
-                <li id="gangs-total" class="total">00354</li>                        
-            </ul>
+
             
             <div class="ranking">
             <div id="scroller-wrapper">             
@@ -244,25 +195,9 @@ document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 2
                     </div>
                                                     
                  </div> 
-                 <!--! end of #ranking -->  
-                 
-                 <div class="recognition" id="gotd">
-                 	<h3>Gang of the Day</h3>
-                    <p id="gang-of-the-day">TagszCrew</p>
-                    <p id="gang-of-the-day-count"><span id="gang-of-the-day-count-tags">14 tags</span> &amp; <span id="gang-of-the-day-count-erased">6 erased</span></p>
-                 </div>
-                 
-                 <div class="recognition" id="badge"></div>
-                 
-                 <div class="recognition" id="potd">
-                 	<h3>Player of the Day</h3>
-                    <p id="player-of-the-day">Bobby</p>
-                    <p id="player-of-the-day-count"><span id="player-of-the-day-count-tags">4 tags</span> &amp; <span id="player-of-the-day-count-erased">2 erased</span></p>
-                 </div>
-                                   
-         
+                 <!--! end of #ranking -->                                                                      
 			        
-			</div>
+		  </div>
         	<!--! end of #main -->
 		
 		</div>
