@@ -274,7 +274,15 @@ $(document).ready(function() {
 });
 
 
-var myScroll;
+/*$(document).ready(function() { 
+$("#back")
+      .click(function() {
+            history.back();
+            return false;
+      });
+});*/
+
+/*var myScroll;
 function loaded() {
 	myScroll = new iScroll('scroller-wrapper');
 }
@@ -286,7 +294,7 @@ function loaded2() {
 
 $( '#leaderboard-gangs' ).live( 'pagebeforeshow',loaded);
 
-$( '#leaderboard-players' ).live( 'pagebeforeshow',loaded2);
+$( '#leaderboard-players' ).live( 'pagebeforeshow',loaded2);*/
 
 
 
@@ -294,6 +302,7 @@ $(document).bind("mobileinit", function() {
   $.support.touchOverflow = true;
   $.mobile.touchOverflowEnabled = true;
 });
+
 
 
 /** Utilities ***/

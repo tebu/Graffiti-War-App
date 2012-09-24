@@ -586,13 +586,13 @@ input[type=submit]:active {
 	top: 100px;
 	float: left
 }
-#profile li#back {
+#profile li#back-profile {
 	background:url(../img/back.png) no-repeat;
 	width: 134px;
 	height: 134px;
 }
-#profile li#back:active, #profile li#gang:active {
-	top: 205px;
+#profile li#back-profile:active, #profile li#gang:active {
+	top: 115px;
 }	
 #profile li#gang {
 	background:url(../img/gang-small.png) no-repeat;
@@ -756,12 +756,16 @@ dt:active { background: #762F15 }
     font-weight: bold;
 	text-decoration: none
 }
-span.check {
-	position:absolute;
-	top: 0;
-	right: 0;
-	background: #27A481;
-	padding: 10px
+
+.modal_close {
+    background: /*url("../img/modal_close.png") repeat scroll 0 0 transparent*/ #C00;
+    display: block;
+    height: 214px;
+    position: relative;
+    right: 12px;
+    top: 12px;
+    width: 214px;
+    z-index: 20000;
 }
 
 /* ==|== gang.html =====================================================
@@ -908,12 +912,16 @@ span#sprayed-avg, span#erased-avg, span#ranking {
 	font-family:'KomikaDisplayRegular';
 	text-shadow: 0 1px 2px #111;
 }
-a#back {
+.container_leaderboard-menu a#back {
 	width: 134px;
 	height: 156px;
 	position: relative;
 	top: 100px;
 	left: 50px
+}
+.container_leaderboard-menu a#back:active {
+	top: 115px;
+
 }
 #fame {
 	position: relative;
@@ -988,23 +996,31 @@ a#back {
 /* ==|== leaderboard-gangs.html & leaderboard-players.html =====================================================
   
    ========================================================================== */
+
 .container_leaderboard {	
 	background: #E68C00 url(../img/bg-leaderboard.jpg) no-repeat;
 	width: 1280px;
   	height: 1920px;
 	margin: 0 auto;	
 	color: #fff;
-	font-family:'KomikaDisplayRegular';
+	font-family:'KomikaAxisRegular';
 	text-shadow: 0 1px 2px #111;
+}
+.container_leaderboard h1 {
+	color: #fff;
+	font-size: 5em;
+	position:relative;
+	top: -80px
 }
 a#back {
 	width: 134px;
 	height: 156px;
 	position: relative;
 	top: 100px;
-	left: 50px
+	left: 50px;
+	z-index: 100
 }
-a#back:active {
+a#back img:active {
 	top: 115px;
 }	
 .ranking li#gang {
@@ -1016,8 +1032,8 @@ a#back:active {
 }
 .ranking {
 	position:relative;
-	top: 100px;
-	width: 90%;
+	top: 40px;
+	width: 98%;
 	margin: 0 auto;
 }
 .wrapper2 {
@@ -1033,14 +1049,14 @@ table.tablesorter tr {
 }
 table.tablesorter td {
 	 padding: 45px 30px !important;
-	 border-right: 4px solid #FFD85B;
+	 border-right: 6px dashed #FFD85B;
 }
 table.tablesorter td:last-child {
 	 border-right: none;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	border-right: 4px solid #FFD85B;
-	border-bottom: 25px solid #FFD85B;
+	border-right: 6px dashed #FFD85B;
+	border-bottom: 2px solid #FFD85B;
 	padding: 50px 0 50px 30px;
 	font-family: 'KomikaAxisRegular'
 }
@@ -1077,7 +1093,6 @@ tr.odd {
 	background: -ms-linear-gradient(top,  #f4b624 51%,#ffc74e 52%);
 	background: linear-gradient(to bottom,  #f4b624 51%,#ffc74e 52%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4b624', endColorstr='#ffc74e',GradientType=0 );
-	box-shadow: 0 0 3px #BC7E03 inset;
 }
 tr.even {
 	background: #f79525;
@@ -1150,174 +1165,85 @@ li#gangs-total:before {
 	content:"gangs";
 }
 .content{width:100%; height:1128px;  overflow:auto;}
-.mCSB_container{
-	width:auto;
-	margin-right:50px;
-	overflow:hidden;
-}
-.mCSB_container.mCS_no_scrollbar{
-	margin-right:0;
-}
-.mCustomScrollBox .mCSB_scrollTools{
-	width:16px;
-	height:100%;
-	top:0;
-	right:15px;
-}
-.mCSB_scrollTools .mCSB_draggerContainer{
-	height:100%;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-}
-.mCSB_scrollTools .mCSB_buttonUp+.mCSB_draggerContainer{
-	padding-bottom:40px;
-}
-.mCSB_scrollTools .mCSB_draggerRail{
-	width:2px;
-	height:100%;
-	margin:0 auto;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
-}
-.mCSB_scrollTools .mCSB_dragger{
-	cursor:pointer;
-	width:100%;
-	height:30px;
-}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-	width:10px;
-	height:100%;
-	margin:0 auto;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
-	text-align:center;
-}
-.mCSB_dragger_bar {
-	width: 15px !important
-}
-.mCSB_scrollTools .mCSB_buttonUp,
-.mCSB_scrollTools .mCSB_buttonDown{
-	height:20px;
-	overflow:hidden;
-	margin:0 auto;
-	cursor:pointer;
-}
-.mCSB_scrollTools .mCSB_buttonDown{
-	bottom:0;
-	margin-top:-40px;
-}
-.mCustomScrollBox .mCSB_scrollTools{
-	opacity:0.75;
-}
-.mCustomScrollBox:hover .mCSB_scrollTools{
-	opacity:1;
-}
-.mCSB_scrollTools .mCSB_draggerRail{
-/*	background:#000;
-	background:rgba(0,0,0,0.4);
-	filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)";*/
-	border-left: 8px dotted #FFC477;
-}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-	background:#fff; /* rgba fallback */
-	background:rgba(255,255,255,0.75);
-	filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
-}
-.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-	background:rgba(255,255,255,0.85);
-	filter:"alpha(opacity=85)"; -ms-filter:"alpha(opacity=85)"; /* old ie */
-}
-.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
-.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-	background:rgba(255,255,255,0.9);
-	filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
-}
-.mCSB_scrollTools .mCSB_buttonUp,
-.mCSB_scrollTools .mCSB_buttonDown,
-.mCSB_scrollTools .mCSB_buttonLeft,
-.mCSB_scrollTools .mCSB_buttonRight{
-	background-image:url(../img/mCSB_buttons.png);
-	background-repeat:no-repeat;
-	opacity:0.4;
-	filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
-}
-.mCSB_scrollTools .mCSB_buttonUp{
-	background-position:0 0;
-}
-.mCSB_scrollTools .mCSB_buttonDown{
-	background-position:0 -20px;
 
-}
-.mCSB_scrollTools .mCSB_buttonLeft{
-	background-position:0 -40px;
-}
-.mCSB_scrollTools .mCSB_buttonRight{
-	background-position:0 -56px;
-}
-.mCSB_scrollTools .mCSB_buttonUp:hover,
-.mCSB_scrollTools .mCSB_buttonDown:hover,
-.mCSB_scrollTools .mCSB_buttonLeft:hover,
-.mCSB_scrollTools .mCSB_buttonRight:hover{
-	opacity:0.75;
-	filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
-}
-.mCSB_scrollTools .mCSB_buttonUp:active,
-.mCSB_scrollTools .mCSB_buttonDown:active,
-.mCSB_scrollTools .mCSB_buttonLeft:active,
-.mCSB_scrollTools .mCSB_buttonRight:active{
-	opacity:0.9;
-	filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
-}
-.mCustomScrollBox:after {
-   	box-shadow: 
-	0  -20px 25px -20px rgba(0, 0, 0, 0.9) inset;
-    content: "";
-    display: block;
-    height: 77%;
-    left: 0;
-    position: absolute;
-    bottom: 0;
-    width: 95.6%;
-    z-index: 2000;
-}
-.mCSB_dragger {
-	height: 20% !important;
-}
-.mCSB_scrollTools {
-	opacity: 0 !important;
-	display: none
-}
-#scroller-wrapper {
-	position:relative; z-index:1;
-	top:45px; bottom:48px; left:0;
-	width:100%;
-	background:#D88E21;
-	overflow:auto;
-	height: 1085px;
-}
-#scroller-wrapper2 {
-	position:relative; z-index:1;
-	top:45px; bottom:48px; left:0;
-	width:100%;
-	background:#D88E21;
-	overflow:auto;
-	height: 1085px;
-}
+
 #scroller {
-	position:absolute; z-index:1;
-/*	-webkit-touch-callout:none;*/
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-	width:100%;
-	padding:0;
+	padding-right: 10px;
+	height: 1500px;
+	width: 100%;
+	overflow: auto;
+  	margin-bottom:20px;
 }
 
+/* ==|== achievements.html =====================================================
+  
+   ========================================================================== */
+#container_achievements {	
+	background: #f2eea2;
+	background: -moz-radial-gradient(center, ellipse cover,  #f2eea2 0%, #e68c00 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2eea2), color-stop(100%,#e68c00));
+	background: -webkit-radial-gradient(center, ellipse cover,  #f2eea2 0%,#e68c00 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #f2eea2 0%,#e68c00 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #f2eea2 0%,#e68c00 100%);
+	background: radial-gradient(ellipse at center,  #f2eea2 0%,#e68c00 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2eea2', endColorstr='#e68c00',GradientType=1 );
+	width: 60% !important;
+	max-width: 100% !important;
+	margin: 0 auto;	
+}
+#cancel-btn {
+	background:url(../img/cancel.png) no-repeat;
+	width: 134px;
+	height: 134px;
+	position:relative;
+	top:-70px;
+	left: -70px
+}
+#container_achievements h3 {	
+	padding: 20px
+}
+#container_achievements a {	
+	text-decoration: none
+}
+#achievement-box {
+	position:relative;
+	top: -90px;
+}
+.ui-collapsible-heading .ui-btn {
+    text-align: center !important;
+	background: #bf3e17;
+	background: -moz-linear-gradient(45deg,  #bf3e17 0%, #e68c00 100%)!important;
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#bf3e17), color-stop(100%,#e68c00)!important);
+	background: -webkit-linear-gradient(45deg,  #bf3e17 0%,#e68c00 100%)!important;
+	background: -o-linear-gradient(45deg,  #bf3e17 0%,#e68c00 100%)!important;
+	background: -ms-linear-gradient(45deg,  #bf3e17 0%,#e68c00 100%)!important;
+	background: linear-gradient(45deg,  #bf3e17 0%,#e68c00 100%)!important;
+	font-size: 3em !important;
+	padding: 20px;
+	box-shadow: 10px 10px 0 #4F2000;
+	position:relative
+}
+.ui-collapsible-heading {
+	margin: 40px 0 !important
+}
+.ui-dialog-contain { width: 92.5%; max-width: 100% !important; margin: 10% auto 15px auto; padding: 0; }
+.ui-collapsible-content {
+    text-align: center;
+	font-size: 3em !important;
+	color:#7B2703
+}
+.ui-icon-shadow {
+    box-shadow: none !important;
+}
 
-
-
-
+span.check {
+	position:absolute;
+  	padding: 10px;
+    right: -25px;
+    top: -85px;
+	color: #8DF29D;
+	font-size: 2em;
+}
 /*
  * Media queries for responsive design github.com/h5bp/mobile-boilerplate/wiki/The-Style
  */

@@ -47,7 +47,7 @@
 }
 /* Focus state - set here for specificity (note: these classes are added by JavaScript)
 -----------------------------------------------------------------------------------------------------------*/
-.ui-btn:focus, .ui-link-inherit:focus {
+/*.ui-btn:focus, .ui-link-inherit:focus {
 	outline: 0;
 }
 .ui-btn.ui-focus {
@@ -55,16 +55,16 @@
 }
 .ui-focus,
 .ui-btn:focus {
-	-moz-box-shadow: inset 0px 0px 3px 		#387bbe /*{global-active-background-color}*/, 0px 0px 9px 		#387bbe /*{global-active-background-color}*/;
-	-webkit-box-shadow: inset 0px 0px 3px 	#387bbe /*{global-active-background-color}*/, 0px 0px 9px 		#387bbe /*{global-active-background-color}*/;
-	box-shadow: inset 0px 0px 3px 			#387bbe /*{global-active-background-color}*/, 0px 0px 9px 		#387bbe /*{global-active-background-color}*/;
+	-moz-box-shadow: inset 0px 0px 3px 		#387bbe, 0px 0px 9px 		#387bbe/;
+	-webkit-box-shadow: inset 0px 0px 3px 	#387bbe, 0px 0px 9px 		#387bbe;
+	box-shadow: inset 0px 0px 3px 			#387bbe, 0px 0px 9px 		#387bbe;
 }
 .ui-input-text.ui-focus,
 .ui-input-search.ui-focus {
-	-moz-box-shadow: 0px 0px 12px 			#387bbe /*{global-active-background-color}*/;
-	-webkit-box-shadow: 0px 0px 12px 		#387bbe /*{global-active-background-color}*/;
-	box-shadow: 0px 0px 12px 					#387bbe /*{global-active-background-color}*/;	
-}
+	-moz-box-shadow: 0px 0px 12px 			#387bbe;
+	-webkit-box-shadow: 0px 0px 12px 		#387bbe/;
+	box-shadow: 0px 0px 12px 					#387bbe;	
+}*/
 /* unset box shadow in browsers that don't do it right
 -----------------------------------------------------------------------------------------------------------*/
 .ui-mobile-nosupport-boxshadow * {
@@ -776,15 +776,15 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-navbar li .ui-btn .ui-btn-inner { padding-top: .7em; padding-bottom: .8em }
 .ui-navbar li .ui-btn-icon-top .ui-btn-inner { padding-top: 30px; }
 .ui-navbar li .ui-btn-icon-bottom .ui-btn-inner { padding-bottom: 30px; }
-.ui-btn { display: block; text-align: center; cursor:pointer; position: relative; margin: .5em 0; padding: 0; }
+/*.ui-btn { display: block; text-align: center; cursor:pointer; position: relative; margin: .5em 0; padding: 0; }
 .ui-btn.ui-mini { margin-top: .25em; margin-bottom: .25em; }
 .ui-btn-left, .ui-btn-right, .ui-input-clear, .ui-btn-inline,
 .ui-grid-a .ui-btn, .ui-grid-b .ui-btn, .ui-grid-c .ui-btn, .ui-grid-d .ui-btn, .ui-grid-e .ui-btn, .ui-grid-solo .ui-btn { margin-right: 5px; margin-left: 5px; }
 .ui-btn-inner { font-size: 16px; padding: .6em 20px; min-width: .75em; display: block; position: relative; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; zoom: 1; }
 .ui-btn input, .ui-btn button { z-index: 2; }
 .ui-btn-left, .ui-btn-right, .ui-btn-inline { display: inline-block; vertical-align: middle; }
-.ui-btn-block { display: block; }
-.ui-header .ui-btn,
+.ui-btn-block { display: block; }*/
+/*.ui-header .ui-btn,
 .ui-footer .ui-btn { display: inline-block; margin: 0; }
 .ui-header .ui-btn-block,
 .ui-footer .ui-btn-block { display: block; }
@@ -818,7 +818,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-footer .ui-btn-icon-bottom .ui-btn-inner { padding: .55em 3px 30px 3px; }
 .ui-mini.ui-btn-icon-bottom .ui-btn-inner,
 .ui-mini .ui-btn-icon-bottom .ui-btn-inner { padding-bottom: 30px; }
-/*btn icon positioning*/
+*//*btn icon positioning*/
 .ui-btn-icon-notext .ui-icon { display: block; z-index: 0;}
 .ui-btn-icon-left > .ui-btn-inner > .ui-icon, .ui-btn-icon-right > .ui-btn-inner > .ui-icon { position: absolute; top: 50%; margin-top: -9px; }
 .ui-btn-icon-top .ui-btn-inner .ui-icon, .ui-btn-icon-bottom .ui-btn-inner .ui-icon { position: absolute; left: 50%; margin-left: -9px; }

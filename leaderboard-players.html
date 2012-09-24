@@ -19,8 +19,37 @@
 <!-- jQuery Mobile-->
 <script src="js/libs/jquery.mobile-1.1.1.js"></script>
 
-<!-- iScroll-->
-<script type="text/javascript" src="js/libs/iscroll.js"></script>
+
+<!-- TableSorter-->
+<script src="js/libs/jquery.tablesorter.js"></script>
+<script>
+$(document).ready(function() { 
+    // call the tablesorter plugin 
+    $("table").tablesorter({ 
+        // sort on the first column and third column, order asc 
+        sortList: [[0,0]] ,
+		 headers: { 1: { sorter: false} }
+    }); 
+});
+</script>
+
+
+
+<!-- NiceScroll-->
+<!--<script type="text/javascript" src="js/libs/iscroll.js"></script>-->
+<script type="text/javascript" src="js/libs/jquery.nicescroll.min.js"></script>
+<script>
+  $(document).ready(function() {
+  
+	var nice = $("html").niceScroll();  // The document page (body)
+	
+	$("#div1").html($("#div1").html()+' '+nice.version);
+    
+    $("#scroller").niceScroll({cursorborder:"",cursorcolor:"#fff",boxzoom:true}); // First scrollable DIV
+    
+  });
+</script>
+
 
 <!-- Application models-->
 <script src="js/models/user.js"></script>
@@ -33,8 +62,8 @@
 <!-- Application logic-->
 <script src="js/app.js"></script>
 
-<!-- TableSorter-->
-<script src="js/libs/jquery.tablesorter.js"></script>
+
+
 
 
 </head>
@@ -46,9 +75,14 @@
 
 			<div id="main" role="main">
             
-            <a href="leaderboard-menu.html" id="back" data-transition="slide"><img src="img/gang-back.png"></a>           
+            <a href="leaderboard-menu.html" data-transition="slide" id="back"><img src="img/gang-back.png"></a> 
             
-            <div class="ranking">                         
+           <h1>Leaderboard</h1>       
+            
+            <div class="ranking">
+            
+            
+           
             	<div id="scroller-wrapper2">
                 	<div id="scroller">
                     

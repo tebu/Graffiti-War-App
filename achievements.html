@@ -1,0 +1,152 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+
+<title>Street Art Gangs</title>
+<meta name="description" content="Street Art Gangs demo">
+<meta name="author" content="Team NIMO">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.mobile-1.1.1.css">
+
+<!-- jQuery-->
+<script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.easing.1.3.js"></script>
+<!-- LeanModal-->
+<script src="js/libs/jquery.leanModal.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("#tip-trigger").leanModal({ top : 200, overlay : 0.8, closeButton: ".modal_close" });
+	$("#tip-trigger2").leanModal({ top : 200, overlay : 0.8, closeButton: ".modal_close" });
+});
+</script>
+<script>
+$(document).ready(function($) {
+       $('.accordion dd').hide();
+       $('.accordion dt a').click(function(){
+          if ($(this).hasClass('selected')) {
+               $(this).removeClass('selected');
+               $(this).parent().next().slideUp();
+          } else {
+               $('.accordion dt a').removeClass('selected');
+               $(this).addClass('selected');
+               $('.accordion dd').slideUp();
+               $(this).parent().next().slideDown();
+          }
+          return false;
+       });
+});
+</script>
+<!-- jQuery Mobile-->
+<script src="js/libs/jquery.mobile-1.1.1.js"></script>
+
+
+<!-- Application models-->
+<script src="js/models/user.js"></script>
+<script src="js/models/localization.js"></script>
+<script src="js/models/venue.js"></script>
+<script src="js/models/team.js"></script>
+
+<!-- Application messaging protocol-->
+<script src="js/protocol.js"></script>
+<!-- Application logic-->
+<script src="js/app.js"></script>
+
+
+
+</head>
+
+<body>
+
+	<div data-role="page" id="">
+		<div id="container_achievements">
+
+			<div id="main" role="main">
+                
+            
+
+			
+     <a id="cancel-btn" data-transition="slide" data-role="button" data-rel="back"><li id="cancel"></li></a>
+          		
+<div data-role="collapsible-set" id="achievement-box">
+					
+	<div data-role="collapsible">
+	<h3>Rookie coming through <span class="check">✔</span></h3>
+	<p>The First tag &amp; erasing accomplished</p>
+	</div>
+	
+	<div data-role="collapsible">
+	<h3>Player of the Day</h3>
+	<p>Your spray count was the highest on that day</p>
+	</div>
+    
+    <div data-role="collapsible">
+	<h3>Player of the Week</h3>
+	<p>Your spray count was the highest on that week</p>
+	</div>
+    
+   	<div data-role="collapsible">
+	<h3>Player of the Month</h3>
+	<p>Your spray count was the highest on that month</p>
+	</div>
+    
+    <div data-role="collapsible">
+	<h3>Getting A Reputation <span class="check">✔</span></h3>
+	<p>20 successfully sprayed.</p>
+	</div>
+    
+    <div data-role="collapsible">
+	<h3>Notorious</h3>
+	<p>You've got "Player of the Day", "Player of the Week" &amp; "Player of the Month" achievements</p>
+	</div>
+    
+    <div data-role="collapsible">
+	<h3>Eraser</h3>
+	<p>50 spray erased</p>
+	</div>
+    
+    <div data-role="collapsible">
+	<h3>The Tag Master</h3>
+	<p>100 successfully sprayed</p>
+	</div>
+	
+	
+</div>
+	   
+        
+       <!-- <dl class="accordion">
+
+            <dt><a href="">Rookie coming through</a><span class="check">✔</span></dt>
+            <dd>The First tag &amp; erasing accomplished</dd>
+            
+    		<dt><a href="">Player of the Day</a></dt>
+            <dd>Your spray count was the highest on that day</dd>
+            
+            <dt><a href="">Player of the Week</a><span class="check">✔</span></dt>
+            <dd>Your spray count was the highest on that week</dd>
+            
+            <dt><a href="">Player of the Month</a></dt>
+            <dd>Your spray count was the highest on that month</dd>
+            
+            <dt><a href="">Getting A Reputation</a></dt>
+            <dd>20 successfully sprayed</dd>
+                       
+            <dt><a href="">Notorious</a></dt>
+            <dd>You've got "Player of the Day", "Player of the Week" &amp; "Player of the Month" achievements</dd>
+            
+            <dt><a href="">Eraser</a></dt>
+            <dd>50 spray erased</dd>
+            
+            <dt><a href="">The Tag Master</a></dt>
+            <dd>100 successfully sprayed</dd>
+            
+       </dl>-->
+                                              	        
+
+   
+</body>
+</html>
