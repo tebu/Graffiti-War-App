@@ -9,12 +9,10 @@
 <meta name="viewport" content="target-densityDpi=device-dpi" />
 
 <!--<link rel="stylesheet" href="css/jquery.mobile.structure-1.1.1.min.css">-->
+
+<!--<link rel="stylesheet" href="css/chopslider.css">-->
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/chopslider.css">
 <link rel="stylesheet" href="css/jquery.mobile-1.1.1.css">
-
-
-
 
 <!-- Cordova -->
 <script type="text/javascript" src="cordova-1.8.1.js"></script>
@@ -31,14 +29,103 @@
 <!-- WebSocket -->
 <script type="text/javascript" src="js/libs/websocket.js"></script>
 
-<!--Chop Slider Core Plugin -->
-<script type="text/javascript"
+
+
+<script src="js/libs/jquery.touchSwipe.min.js"></script>
+<script>
+		var IMG_WIDTH = 400;
+			var currentImg=0;
+			var maxImages=3;
+			var speed=500;
+			
+			var imgs;
+				
+			var swipeOptions=
+			{
+				triggerOnTouchEnd : true,	
+				swipeStatus : swipeStatus,
+				allowPageScroll:"vertical",
+				threshold:75			
+				}
+			
+			$(function()
+			{				
+				imgs = $("#imgs");
+				imgs.swipe( swipeOptions );
+			});
+		
+				
+			/**
+			* Catch each phase of the swipe.
+			* move : we drag the div.
+			* cancel : we animate back to where we were
+			* end : we animate to the next image
+			*/			
+			function swipeStatus(event, phase, direction, distance)
+			{
+				//If we are moving before swipe, and we are going Lor R in X mode, or U or D in Y mode then drag.
+				if( phase=="move" && (direction=="left" || direction=="right") )
+				{
+					var duration=0;
+					
+					if (direction == "left")
+						scrollImages((IMG_WIDTH * currentImg) + distance, duration);
+					
+					else if (direction == "right")
+						scrollImages((IMG_WIDTH * currentImg) - distance, duration);
+					
+				}
+				
+				else if ( phase == "cancel")
+				{
+					scrollImages(IMG_WIDTH * currentImg, speed);
+				}
+				
+				else if ( phase =="end" )
+				{
+					if (direction == "right")
+						previousImage()
+					else if (direction == "left")			
+						nextImage()
+				}
+				
+			
+			}
+					
+			
+		
+			function previousImage()
+			{
+				currentImg = Math.max(currentImg-1, 0);
+				scrollImages( IMG_WIDTH * currentImg, speed);
+			}
+		
+			function nextImage()
+			{
+				currentImg = Math.min(currentImg+1, maxImages-1);
+				scrollImages( IMG_WIDTH * currentImg, speed);
+			}
+				
+
+			function scrollImages(distance, duration)
+			{
+				imgs.css("-webkit-transition-duration", (duration/1000).toFixed(1) + "s");
+				
+
+				var value = (distance<0 ? "" : "-") + Math.abs(distance).toString();
+				
+				imgs.css("-webkit-transform", "translate3d("+value +"px,0px,0px)");
+			}
+			
+		</script>
+
+<!--<script type="text/javascript"
 	src="js/libs/jquery.id.chopslider-2.2.0.free.min.js"></script>
-<!--Chop Slider Transitions Library-->
+
 <script type="text/javascript"
 	src="js/libs/jquery.id.cstransitions-1.2.min.js"></script>
-<!--Scripts with Slider's Initialization -->
-<script type="text/javascript" src="js/libs/demo-tl.js"></script>
+
+<script type="text/javascript" src="js/libs/demo-tl.js"></script>-->
 
 
 <!-- Application models-->
@@ -53,6 +140,7 @@
 <script src="js/app.js"></script>
 
 
+
 </head>
 
 <body>
@@ -65,24 +153,46 @@
 				<ul class="icons" id="top">
 					<li id="money"><span id="money-count">1,100</span></li>
 					<li id="points"><span id="points-count">13,040</span></li>
-					<a href="leaderboard-menu.html" data-transition="slide"><li id="ranking"><img src="img/ranking.png"></li></a>
+					<a href="leaderboard-menu.html" data-transition="slide"><li id="ranking"></li></a>
 
 				</ul>
 			</header>
-
+ 
+      
 			<div id="main">
 
 				<h3>Current selected venue</h3>
+                
+                
+<!--<ul class="carousel" id="carousel-01">
+	<li>1</li>
+	<li>2</li>
+	<li>3<br />Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</li>
+	<li>4</li>
+	<li>5</li>
+</ul>-->
+                
+                
+                
+                
+               <div id="content">
+			<div id="imgs">
+				<img src="img/arts_entertainment.png" />
+				<img src="img/bar.png" />
+				<img src="img/food.png" />
+			</div>
+		</div>
 
-				<div id="venue">
+
+  
+
+<!--				<div id="venue">
 					<a href="#"><div class="arrow" id="left"></div></a> <a href="#"><div
 							class="arrow" id="right"></div></a>
 					<div id="venue-select">
 						<h1 id="venue-text"></h1>
 					</div>
-				</div>
-
-				<!-- Chop Slider -->
+				</div>				
 
 				<div class="wrapper">
 
@@ -90,9 +200,10 @@
 
 					<div class="slide-descriptions"></div>
 
-				</div>
+				</div>-->
+                
+                
 
-				<div id="glow"></div>
 
 			</div>
 			<!--! end of #main -->
@@ -116,6 +227,13 @@
 		</footer>
 
 	</div>
+    
+    
+<script src="js/libs/jquery.carousel.min.js"></script>
+<script>
+$('#carousel-01').carousel();
+</script>
+
 
 </body>
 </html>

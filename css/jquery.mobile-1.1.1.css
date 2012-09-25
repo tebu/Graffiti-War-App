@@ -89,7 +89,7 @@
 body.ui-mobile-viewport,
 div.ui-mobile-viewport { overflow-x: hidden; }
 /* "page" containers - full-screen views, one should always be in view post-pageload */
-.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page { top: 0; left: 0; width: 100%; min-height: 100%; position: absolute; display: none; border: 0; }
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page { top: 0; left: 0; width: 100%; min-height: 100%; position: absolute; display: none; border: 0; } /*This line corrupts swipe.js*/
 .ui-mobile .ui-page-active { display: block; overflow: visible; }
 /* on ios4, setting focus on the page element causes flashing during transitions when there is an outline, so we turn off outlines */
 .ui-page { outline: none; }
@@ -140,6 +140,9 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 /* accessible content hiding */
 .ui-hide-label label.ui-input-text, .ui-hide-label label.ui-select, .ui-hide-label label.ui-slider, .ui-hide-label label.ui-submit, .ui-hide-label .ui-controlgroup-label,
 .ui-hidden-accessible { position: absolute !important; left: -9999px; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+
+
+
 /* Transitions originally inspired by those from jQtouch, nice work, folks */
 .ui-mobile-viewport-transitioning,
 .ui-mobile-viewport-transitioning .ui-page {

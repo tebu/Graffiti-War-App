@@ -91,7 +91,7 @@ sub { bottom: -0.25em; }
    Lists
    ========================================================================== */
 
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul, ol { margin: 1em 0; /*padding: 0 0 0 40px;*/ padding: 0; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 li { list-style: none; }
@@ -251,6 +251,149 @@ h3 { font-size: 2.5em; margin-top: 170px; color: #18A2ED; }
 
 
 
+#gallery {
+/*  background:#23282C;*/
+}
+  #slider {
+    padding:13px 0;
+  }
+  #slider li div {
+    margin: 0 13px;
+    padding: 80px 10px;
+/*    border-radius: 4px;
+    border-top: 1px #fff solid;
+    background: #F7F9FA;
+    -webkit-box-shadow: 0px 1px 2px #0D0F11;
+    -moz-box-shadow: 0px 1px 2px #0D0F11;
+    box-shadow: 0px 1px 2px #0D0F11;*/
+    color: #DDE1E4;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    color: #A4AEB7;
+  }
+  #gallery nav {
+    border-top:1px #3A4146 solid;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#292F34), to(#23282C));
+    background-image: -webkit-linear-gradient(top, #292F34, #23282C);
+    background-image:    -moz-linear-gradient(top, #292F34, #23282C);
+    background-image:     -ms-linear-gradient(top, #292F34, #23282C);
+    background-image:      -o-linear-gradient(top, #292F34, #23282C);
+    background-image:         linear-gradient(top, #292F34, #23282C);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#292F34', EndColorStr='#23282C'); 
+    height:35px;
+    position:relative;
+  }
+    #position {
+      text-align:center;
+      font-size:27px;
+      line-height:1.3;
+      color:#697279;
+      display:block;
+      position:absolute;
+      top:0;
+      left:50%;
+      margin-left:-75px;
+      width:150px;
+    }
+      #position em {
+        display:inline-block;
+        padding:0 3px;
+        font-style:normal;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+        font-family:sans-serif;
+      }
+      #position em.on {
+        color:#fff;
+      }
+    #prev {
+      border-right:1px #232628 solid;
+      display:inline-block;
+      text-decoration:none;
+    }
+      #prev em {
+        display:block;
+        border-right:1px #30373C solid;
+        padding:10px 13px 8px;
+        font-style:normal;
+        font-weight:bold;
+        font-size:11px;
+        text-transform:uppercase;
+        color:#697279;
+        letter-spacing:1px;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+      }
+    #next {
+      border-left:1px #232628 solid;
+      display:inline-block;
+      text-decoration:none;
+      position:absolute;
+      right:0;
+      top:0;
+    }
+      #next em {
+        display:block;
+        border-left:1px #30373C solid;
+        padding:10px 13px 8px;
+        font-style:normal;
+        font-weight:bold;
+        font-size:11px;
+        text-transform:uppercase;
+        color:#697279;
+        letter-spacing:1px;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+      }
+	  
+	  
+
+#content
+			{
+				height:1050px;
+				width:400px;
+				overflow:hidden;
+				position:relative;
+				margin: 0 auto;
+				z-index: 10;
+				top: 100px
+				
+			}
+			
+			#imgs 
+			{
+				float:left;
+				display:inline;
+				
+				-webkit-transition-property: -webkit-transform;
+				-webkit-transition-duration: 0.5s;
+				-webkit-transition-timing-function: ease-out;
+				padding:0px;
+				margin:0px;
+				
+				width:1510px;
+				
+				/*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+				-webkit-transform: translate3d(0px,0px,0px); 
+			}
+	
+	
+			#imgs img
+			{
+				padding:0px;
+				margin:0px;
+				
+				
+				width:400px;
+				height:1050px;
+				
+				/*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+				-webkit-transform: translate3d(0px,0px,0px); 
+			}
+			
+
+
+
+
+
 
 
 
@@ -263,12 +406,14 @@ h3 { font-size: 2.5em; margin-top: 170px; color: #18A2ED; }
 
 
 #container_index {
-	/*	background: url(../img/bg.jpg) no-repeat;*/
-	background: #000522;
-	background: -moz-linear-gradient(top,  #000522 13%, #0e1b49 19%, #02001c 28%, #005af7 82%, #001554 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,#000522), color-stop(19%,#0e1b49), color-stop(28%,#02001c), color-stop(82%,#005af7), color-stop(100%,#001554));
-	background: -webkit-linear-gradient(top,  #000522 13%,#0e1b49 19%,#02001c 28%,#005af7 82%,#001554 100%);
-	background: linear-gradient(top,  #000522 13%,#0e1b49 19%,#02001c 28%,#005af7 82%,#001554 100%);
+	background: url(../img/bg.jpg) no-repeat;
+	background: #05abff;
+	background: -moz-linear-gradient(-45deg,  #05abff 0%, #057dff 23%, #070923 56%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#05abff), color-stop(23%,#057dff), color-stop(56%,#070923));
+	background: -webkit-linear-gradient(-45deg,  #05abff 0%,#057dff 23%,#070923 56%);
+	background: -o-linear-gradient(-45deg,  #05abff 0%,#057dff 23%,#070923 56%);
+	background: -ms-linear-gradient(-45deg,  #05abff 0%,#057dff 23%,#070923 56%);
+	background: linear-gradient(135deg,  #05abff 0%,#057dff 23%,#070923 56%);
 	width: 1280px;
   	height: 1920px;
 	margin: 0 auto;
@@ -278,14 +423,6 @@ h3 { font-size: 2.5em; margin-top: 170px; color: #18A2ED; }
 }
 
 
-#glow {
-	position: absolute;
-	width: 1098px;
-	height: 898px;
-	top: 1025px;
-	left: 100px;
-	background:url(../img/stains.png) no-repeat
-}
 .clearfooter {
 	height: 400px; /*to force footer to the bottom*/
 	clear: both; /*to force footer to the bottom*/
@@ -322,25 +459,46 @@ ul#top li {
 	padding: 0;
 	margin: 0 38px;
 	font-size: 4.5em;
-	color: #f69561;
+	color: #CFD6F1;
 }
 ul#top li#money, ul#top li#points {
 	position: relative;
 	top: 40px;
 }
 ul#top li#money {
-	background:url(../img/money.png) no-repeat;
+	background: #00408C /*url(../img/money.png) no-repeat*/;
+	background: #00408c;
+	background: -moz-linear-gradient(-45deg,  #00408c 48%, #00207a 49%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#00408c), color-stop(49%,#00207a));
+	background: -webkit-linear-gradient(-45deg,  #00408c 48%,#00207a 49%);
+	background: -o-linear-gradient(-45deg,  #00408c 48%,#00207a 49%);
+	background: -ms-linear-gradient(-45deg,  #00408c 48%,#00207a 49%);
+	background: linear-gradient(135deg,  #00408c 48%,#00207a 49%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00408c', endColorstr='#00207a',GradientType=1 );
 	height: 113px;
 	width: 374px;
+	border-left: 20px solid #001C39
 }
 ul#top li#points {
-	background:url(../img/points.png) no-repeat;
+	background: #00408C /*url(../img/points.png) no-repeat*/;
+	background: #00408c;
+	background: -moz-linear-gradient(-45deg,  #00408c 48%, #00207a 49%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(48%,#00408c), color-stop(49%,#00207a));
+	background: -webkit-linear-gradient(-45deg,  #00408c 48%,#00207a 49%);
+	background: -o-linear-gradient(-45deg,  #00408c 48%,#00207a 49%);
+	background: -ms-linear-gradient(-45deg,  #00408c 48%,#00207a 49%);
+	background: linear-gradient(135deg,  #00408c 48%,#00207a 49%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00408c', endColorstr='#00207a',GradientType=1 );
 	height: 113px;
 	width: 374px;
+	border-left: 20px solid #001C39
 }
 ul#top li#ranking {
-	margin: 10px 0 0 70px;
-	position: absolute
+	margin: 0 0 0 70px;
+	position: absolute;
+	background:url(../img/badge.png);
+	width: 111px;
+	height: 185px;
 }
 span#money-count {
 	position: absolute;
@@ -665,7 +823,7 @@ p#tags-sprayed, p#tags-erased, .sprayed, .erased {
  	display: inline-block;
 	margin: 10px 40px;
 	padding: 20px;
-	border-bottom: 4px dashed #A1A1D3;
+	position: relative;
 	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255,255,255,0.2)))	
 }
 li.speed-achievement {
@@ -736,36 +894,15 @@ a#tip-trigger2 span{
 	color: #662710;
 	text-shadow: 0 1px 2px #fff;
 }
-
-/*Accordion*/
-.accordion { margin: 50px; position:relative }
-dt,
-dd { padding: 10px; }
-dd { padding-bottom: 25px; font-family:'SFArchRivalBold'; }
-dd:last-child { padding-bottom: 5px }
-dt {
-    background: #662710;
-    margin-bottom: 10px;
-	border: none;
-	position:relative
-}
-dt:active { background: #762F15 }
-.accordion a {
-    display: block;
-    color: #fff;
-    font-weight: bold;
-	text-decoration: none
-}
-
-.modal_close {
-    background: /*url("../img/modal_close.png") repeat scroll 0 0 transparent*/ #C00;
-    display: block;
-    height: 214px;
-    position: relative;
-    right: 12px;
-    top: 12px;
-    width: 214px;
-    z-index: 20000;
+span.locked {
+	background:url(../img/locked.png) no-repeat;
+	width: 42px;
+	height: 64px;
+	position:absolute;
+	top: 20;
+	left: 9px;
+	display: block;
+	
 }
 
 /* ==|== gang.html =====================================================
@@ -1179,24 +1316,33 @@ li#gangs-total:before {
   
    ========================================================================== */
 #container_achievements {	
-	background: #f2eea2;
+/*	background: #f2eea2;
 	background: -moz-radial-gradient(center, ellipse cover,  #f2eea2 0%, #e68c00 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2eea2), color-stop(100%,#e68c00));
 	background: -webkit-radial-gradient(center, ellipse cover,  #f2eea2 0%,#e68c00 100%);
 	background: -o-radial-gradient(center, ellipse cover,  #f2eea2 0%,#e68c00 100%);
 	background: -ms-radial-gradient(center, ellipse cover,  #f2eea2 0%,#e68c00 100%);
 	background: radial-gradient(ellipse at center,  #f2eea2 0%,#e68c00 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2eea2', endColorstr='#e68c00',GradientType=1 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2eea2', endColorstr='#e68c00',GradientType=1 );*/
+
 	width: 60% !important;
 	max-width: 100% !important;
 	margin: 0 auto;	
+}
+#splash-bg {
+	background:url(../img/splash-bg.png) no-repeat;
+	position:fixed;
+	width: 1026px;
+	height: 1300px;
+	margin-left: -513px;
+	left: 50%;
 }
 #cancel-btn {
 	background:url(../img/cancel.png) no-repeat;
 	width: 134px;
 	height: 134px;
 	position:relative;
-	top:-70px;
+	top:-185px;
 	left: -70px
 }
 #container_achievements h3 {	
@@ -1207,7 +1353,7 @@ li#gangs-total:before {
 }
 #achievement-box {
 	position:relative;
-	top: -90px;
+	top: -220px;
 }
 .ui-collapsible-heading .ui-btn {
     text-align: center !important;
@@ -1230,7 +1376,7 @@ li#gangs-total:before {
 .ui-collapsible-content {
     text-align: center;
 	font-size: 3em !important;
-	color:#7B2703
+	color:#FF6A2A
 }
 .ui-icon-shadow {
     box-shadow: none !important;
@@ -1301,3 +1447,123 @@ textarea[contenteditable] {-webkit-appearance: none;}
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
+
+
+
+
+
+.carousel {
+		
+	
+}
+
+.carousel-frame {
+	border: 1px solid #999;
+	overflow: hidden;
+	position: relative;
+height:600px !important
+}
+
+.carousel-slider {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	/* Trigger hardware acceleration */
+		   -moz-transform: translateZ(0);
+		    -ms-transform: translateZ(0);
+		     -o-transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+	transform:             translateZ(0);
+	width: 100%;
+}
+.carousel-slide {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+/* Prev / next navigation */
+.carousel-nav {
+	margin: 0.5em 0;
+	zoom: 1;
+}
+.carousel-nav:before,
+.carousel-nav:after {
+	content: "";
+	display: table;
+}
+.carousel-nav:after {
+	clear: both;
+}
+.carousel-nav span {
+	cursor: pointer;
+	float: left;
+}
+.carousel-nav .carousel-next {
+	float: right;
+}
+.carousel-nav .state-disabled {
+	color: #999;
+	cursor: default;
+	outline: none;
+}
+
+/* Counter ("slide x of y") */
+.carousel-counter {
+	margin: 0.5em 0;
+}
+
+/* Handles */
+.carousel-handles {
+	margin: 0.5em 0;
+	text-align: center;
+}
+.carousel-handles span {
+	cursor: pointer;
+	margin: 0 0.5em;
+}
+.carousel-handles .state-disabled {
+	color: #999;
+	cursor: default;
+	outline: none;
+}
+.carousel-handles .state-current {
+	color: #c30;
+	cursor: default;
+	outline: none;
+}
+
+
+
+.carousel-handles {
+	margin: 1em 0 0 0;
+}
+
+.carousel-handles span {
+	background: #999;
+	color: #999;
+		   -moz-border-radius: 1em;
+		    -ms-border-radius: 1em;
+		     -o-border-radius: 1em;
+		-webkit-border-radius: 1em;
+	border-radius:             1em;
+	display: inline-block;
+	line-height: 1;
+	margin: 0 0.25em;
+	overflow: hidden;
+	text-index: -100em;
+	width: 1em;
+}
+.carousel-handles .state-disabled {
+	background: #ccc;
+	color: #ccc;
+	cursor: default;
+	outline: none;
+}
+.carousel-handles .state-current {
+	background: #333;
+	color: #333;
+	cursor: default;
+	outline: none;
+}
