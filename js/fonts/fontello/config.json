@@ -1,0 +1,45 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "uid": "bc64550dd022ce21604f97309b346cea",
+      "orig_css": "cog",
+      "orig_code": 9881,
+      "css": "cog",
+      "code": 9881,
+      "src": "entypo"
+    },
+    {
+      "uid": "e335adbc2d898c7d85d40c507796e7b4",
+      "orig_css": "mail",
+      "orig_code": 59392,
+      "css": "mail-1",
+      "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "978aa8facd816df874039e139cb0cdde",
+      "orig_css": "top-list",
+      "orig_code": 127942,
+      "css": "top-list",
+      "code": 127942,
+      "src": "entypo"
+    },
+    {
+      "uid": "457c8e2b305e7af74c1be4f07a01ca92",
+      "orig_css": "vcard",
+      "orig_code": 59170,
+      "css": "vcard",
+      "code": 59170,
+      "src": "entypo"
+    },
+    {
+      "uid": "ecf8edb95c3f45eb433b4cce7ba9f740",
+      "orig_css": "users",
+      "orig_code": 128101,
+      "css": "users",
+      "code": 128101,
+      "src": "entypo"
+    }
+  ]
+}

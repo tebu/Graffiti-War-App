@@ -29,6 +29,8 @@
 <!-- iosSlider plugin -->
 <script src = "js/libs/jquery.iosslider.js"></script>
 
+
+
 <!-- Application models-->
 <script src="js/models/user.js"></script>
 <script src="js/models/localization.js"></script>
@@ -50,19 +52,24 @@
 		<div id="container_index">
 
 			<header>
-				<ul class="icons" id="top">
-<!--					<li id="money"><span id="money-count">1,100</span></li>-->
+            
+            <div id="score">121 / 45</div>
+        
+            
+            
+<!--				<ul class="icons" id="top">
+					<li id="money"><span id="money-count">1,100</span></li>
 					<li id="points"><span id="points-count">13,040</span></li>
-                    <a href="leaderboard-menu.html" data-transition="slide"><li id="ranking-btn">⍟</li></a>
-					<!--<a href="leaderboard-menu.html" data-transition="slide"><li id="ranking"></li></a>-->
+                   <a href="leaderboard-menu.html" data-transition="slide"><li id="ranking-btn">⍟</li></a>
+					<a href="leaderboard-menu.html" data-transition="slide"><li id="ranking"></li></a>
 
-				</ul>
+				</ul>-->
 			</header>
  
       
 			<div id="main">
 
-				<h1>Selected venue</h1>
+				<h1>Location type</h1>
                 
                 
                 <div class = 'iosSlider'>
@@ -71,33 +78,65 @@
 			
 				<div class = 'item' id = 'item1'>
 					
-					<div class = 'text1'><span>Location 1</span></div>
+					<div class = 'text1'><span>Arts & Entertainment</span></div>
 					
-					<div class = 'text2'><span>Lorem ipsum</span></div>
+					<div class = 'text2'><span>City Theatre</span></div>
 					
 				</div>
 				
 				<div class = 'item' id = 'item2'>
 				
-					<div class = 'text1'><span>Location 2</span></div>
+					<div class = 'text1'><span>College & Education</span></div>
 					
-					<div class = 'text2'><span>Lorem ipsum</span></div>
+					<div class = 'text2'><span>University</span></div>
 					
 				</div>
 				
 				<div class = 'item' id = 'item3'>
 				
-					<div class = 'text1'><span>Location 3</span></div>
+					<div class = 'text1'><span>Bar</span></div>
 					
-					<div class = 'text2'><span>Lorem ipsum</span></div>
+					<div class = 'text2'><span>Oluthuone Leskinen</span></div>
 				
 				</div>
 				
 				<div class = 'item' id = 'item4'>
 				
-					<div class = 'text1'><span>Location 4</span></div>
+					<div class = 'text1'><span>Food</span></div>
 					
-					<div class = 'text2'><span>Lorem ipsum</span></div>
+					<div class = 'text2'><span>Amarillo</span></div>
+				
+				</div>
+                
+                <div class = 'item' id = 'item5'>
+				
+					<div class = 'text1'><span>Shop & Service</span></div>
+					
+					<div class = 'text2'><span>Stockmann</span></div>
+				
+				</div>
+                
+                <div class = 'item' id = 'item6'>
+				
+					<div class = 'text1'><span>Nightlife Spot</span></div>
+					
+					<div class = 'text2'><span>Tivoli</span></div>
+				
+				</div>
+                
+                <div class = 'item' id = 'item7'>
+				
+					<div class = 'text1'><span>Great Outdoors</span></div>
+					
+					<div class = 'text2'><span>Rotuaari</span></div>
+				
+				</div>
+                
+                <div class = 'item' id = 'item8'>
+				
+					<div class = 'text1'><span>Travel & Transport</span></div>
+					
+					<div class = 'text2'><span>Railway station</span></div>
 				
 				</div>
 			
@@ -108,11 +147,15 @@
 				<div class = 'button'></div>
 				<div class = 'button'></div>
 				<div class = 'button'></div>
+                <div class = 'button'></div>
+				<div class = 'button'></div>
+				<div class = 'button'></div>
+                <div class = 'button'></div>
 			</div>
 		
 		</div>
                 
-                
+            <h2>Current venue</h2>    
 
 			</div>
 			<!--! end of #main -->
@@ -125,18 +168,27 @@
 
 
             
-            			<ul class="icons" id="bottom">
+<!--            			<ul class="icons" id="bottom">
 				<a href="#"><li>Messages<span
 						id="unread">2</span></li></a>
-				<!--#unread span should be visible only when there is unread messages-->
 				<a href="#"><li>Equipment</li></a>
 				<a href="gang.html" data-transition="slide"><li>Gang</li></a>
 				<a href="profile.html" data-transition="slide"><li>Profile</li></a>
-			</ul>
+			</ul>-->
+            
+            <nav>      
+  <ul class="nav">       
+    <li><a href="#" class="icon-mail"></a></li>
+    <li><a href="#" class="icon-cog"></a></li>
+    <li><a href="#" class="icon-user"></a></li>
+    <li><a href="#" class="icon-cd"></a></li>
+    <li><a href="#" class="icon-top-list"></a></li>
+  </ul> 
+</nav>
 
 		</footer>
 
 	</div>
-    
+
 </body>
 </html>

@@ -20,7 +20,7 @@ $(document).ready(function() {
 		responsiveSlideWidth: true,
 		navSlideSelector: $('.iosSliderButtons .button'),
 		infiniteSlider: false,
-		startAtSlide: '2',
+		startAtSlide: '1',
 		onSlideChange: slideContentChange,
 		onSlideComplete: slideContentComplete,
 		onSliderLoaded: slideContentLoaded
@@ -207,28 +207,28 @@ var addVenue = function (name, category) {
 	$('.slide-descriptions').append('<div class="sl-descr">'+name+'</div>');
 	switch (category){
 		case 'Arts & Entertainment':
-			$('#slider').append('<div class="slide"> <img src="img/arts_entertainment.png" alt="Arts & Entertainment"  /> </div>');
+			$('#slider').append('<div class="slide"> <img src="img/locations/arts_entertainment.png" alt="Arts & Entertainment"  /> </div>');
 			break;	
 		case 'College & Education':
-			$('#slider').append('<div class="slide"> <img src="img/education.png" alt="College & Education" /> </div>');
+			$('#slider').append('<div class="slide"> <img src="img/locations/education.png" alt="College & Education" /> </div>');
 			break;
 		case 'Bar':
-			$('#slider').append('<div class="slide"> <img src="img/bar.png" alt="Bar" /> </div>');
+			$('#slider').append('<div class="slide"> <img src="img/locations/bar.png" alt="Bar" /> </div>');
 			break;
 		case 'Food':
-			$('#slider').append('<div class="slide"> <img src="img/food.png" alt="Food"  /> </div>');
+			$('#slider').append('<div class="slide"> <img src="img/locations/food.png" alt="Food"  /> </div>');
 			break;		
 		case 'Shop & Service':
-			$('#slider').append('<div class="slide"> <img src="img/shops.png" alt="Shops & Service" /> </div>');
+			$('#slider').append('<div class="slide"> <img src="img/locations/shops.png" alt="Shops & Service" /> </div>');
 			break;						
 		case 'Nightlife Spot':
-			$('#slider').append('<div class="slide"> <img src="img/nightlife.png" alt="Nightlife Spot" /> </div>');
+			$('#slider').append('<div class="slide"> <img src="img/locations/nightlife.png" alt="Nightlife Spot" /> </div>');
 			break;		            
 		case 'Great Outdoors':
 			$('#slider').append('<div class="slide"> <img src="img/outdoors.png" alt="Great Outdoors"  /> </div>');
 			break;		            
 		case 'Travel & Transport':
-			$('#slider').append('<div class="slide"> <img src="img/travel.png" alt="Travel & Transport"  /> </div>');
+			$('#slider').append('<div class="slide"> <img src="img/locations/travel.png" alt="Travel & Transport"  /> </div>');
 			break;	
 		default :
 			console.log("Category not found for: " + name + " " + category);	
