@@ -8,10 +8,9 @@
 <meta name="author" content="Team NIMO">
 <meta name="viewport" content="target-densityDpi=device-dpi" />
 
-<!--<link rel="stylesheet" href="css/jquery.mobile.structure-1.1.1.min.css">-->
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/jquery.mobile-1.1.1.css">
+
 
 <!-- Cordova -->
 <script type="text/javascript" src="cordova-1.8.1.js"></script>
@@ -20,15 +19,9 @@
 <script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
 
-<!-- jQuery Mobile-->
-<script src="js/libs/jquery.mobile-1.1.1.js"></script>
 
 <!-- WebSocket -->
 <script type="text/javascript" src="js/libs/websocket.js"></script>
-
-<!-- iosSlider plugin -->
-<script src = "js/libs/jquery.iosslider.js"></script>
-
 
 
 <!-- Application models-->
@@ -39,9 +32,17 @@
 
 <!-- Application messaging protocol-->
 <script src="js/protocol.js"></script>
+
+<!-- iosSlider plugin -->
+<script src = "js/libs/jquery.iosslider.js"></script>
+
+
 <!-- Application logic-->
 <script src="js/app.js"></script>
 
+
+
+	
 
 </head>
 
@@ -52,121 +53,134 @@
 		<div id="container_index">
 
 			<header>
-            
-            <div id="score">121 / 45</div>
-        
-            
-            
-<!--				<ul class="icons" id="top">
-					<li id="money"><span id="money-count">1,100</span></li>
-					<li id="points"><span id="points-count">13,040</span></li>
-                   <a href="leaderboard-menu.html" data-transition="slide"><li id="ranking-btn">⍟</li></a>
-					<a href="leaderboard-menu.html" data-transition="slide"><li id="ranking"></li></a>
-
-				</ul>-->
+            <h4>Scoreboard</h4>
+            	<div id="score">
+                	<ul>
+                    	<li id="sprayed"></li>
+                        <li id="erased"></li>
+                    </ul>
+                
+                </div>
+                   
 			</header>
  
       
 			<div id="main">
-
-				<h1>Location type</h1>
-                
+            <ul id="locations">
+                <li><h2>Category</h2></li> 
+                <li><h2>Current venue</h2></li>   
+			</ul>
                 
                 <div class = 'iosSlider'>
+                
 		
-			<div class = 'slider'>
+                    <div class = 'slider'>
+                    
+                        <div class = 'item' id = 'item1'>
+                            
+                            <div class = 'text1'><span>Arts & Entertainment</span></div>
+                            
+                          	<div class = 'text2'><span>City Theatre</span></div>
+                            
+                        	<img src="img/locations/arts_entertainment.png"> 
+                        
+                        </div>
+                        
+                        <div class = 'item' id = 'item2'>
+                        
+                            <div class = 'text1'><span>College & Education</span></div>
+                            
+                            <div class = 'text2'><span>University</span></div>
+                            
+                            <img src="img/locations/education.png">
+                            
+                        </div>
+                        
+                        <div class = 'item' id = 'item3'>
+                        
+                            <div class = 'text1'><span>Bar</span></div>
+                            
+                            <div class = 'text2'><span>Oluthuone Leskinen</span></div>
+                            
+                            <img src="img/locations/bar.png">
+                        
+                        </div>
+                        
+                        <div class = 'item' id = 'item4'>
+                        
+                            <div class = 'text1'><span>Food</span></div>
+                            
+                            <div class = 'text2'><span>Amarillo</span></div>
+                            
+                            <img src="img/locations/food.png">
+                        
+                        </div>
+                        
+                        <div class = 'item' id = 'item5'>
+                        
+                            <div class = 'text1'><span>Shop & Service</span></div>
+                            
+                            <div class = 'text2'><span>Stockmann</span></div>
+                            
+                            <img src="img/locations/shops.png">
+                        
+                        </div>
+                        
+                        <div class = 'item' id = 'item6'>
+                        
+                            <div class = 'text1'><span>Nightlife Spot</span></div>
+                            
+                            <div class = 'text2'><span>Tivoli</span></div>
+                            
+                            <img src="img/locations/nightlife_spots.png">
+                        
+                        </div>
+                        
+                        <div class = 'item' id = 'item7'>
+                        
+                            <div class = 'text1'><span>Great Outdoors</span></div>
+                            
+                            <div class = 'text2'><span>Rotuaari</span></div>
+                            
+                            <img src="img/locations/great_outdoors.png">
+                        
+                        </div>
+                        
+                        <div class = 'item' id = 'item8'>
+                        
+                            <div class = 'text1'><span>Travel & Transport</span></div>
+                            
+                            <div class = 'text2'><span>Railway station</span></div>
+                            
+                            <img src="img/locations/transportation.png">
+                        
+                        </div>
+                    
+                    </div>
 			
-				<div class = 'item' id = 'item1'>
-					
-					<div class = 'text1'><span>Arts & Entertainment</span></div>
-					
-					<div class = 'text2'><span>City Theatre</span></div>
-					
-				</div>
-				
-				<div class = 'item' id = 'item2'>
-				
-					<div class = 'text1'><span>College & Education</span></div>
-					
-					<div class = 'text2'><span>University</span></div>
-					
-				</div>
-				
-				<div class = 'item' id = 'item3'>
-				
-					<div class = 'text1'><span>Bar</span></div>
-					
-					<div class = 'text2'><span>Oluthuone Leskinen</span></div>
-				
-				</div>
-				
-				<div class = 'item' id = 'item4'>
-				
-					<div class = 'text1'><span>Food</span></div>
-					
-					<div class = 'text2'><span>Amarillo</span></div>
-				
-				</div>
-                
-                <div class = 'item' id = 'item5'>
-				
-					<div class = 'text1'><span>Shop & Service</span></div>
-					
-					<div class = 'text2'><span>Stockmann</span></div>
-				
-				</div>
-                
-                <div class = 'item' id = 'item6'>
-				
-					<div class = 'text1'><span>Nightlife Spot</span></div>
-					
-					<div class = 'text2'><span>Tivoli</span></div>
-				
-				</div>
-                
-                <div class = 'item' id = 'item7'>
-				
-					<div class = 'text1'><span>Great Outdoors</span></div>
-					
-					<div class = 'text2'><span>Rotuaari</span></div>
-				
-				</div>
-                
-                <div class = 'item' id = 'item8'>
-				
-					<div class = 'text1'><span>Travel & Transport</span></div>
-					
-					<div class = 'text2'><span>Railway station</span></div>
-				
-				</div>
-			
-			</div>
-			
-			<div class = 'iosSliderButtons'>
-				<div class = 'button'></div>
-				<div class = 'button'></div>
-				<div class = 'button'></div>
-				<div class = 'button'></div>
-                <div class = 'button'></div>
-				<div class = 'button'></div>
-				<div class = 'button'></div>
-                <div class = 'button'></div>
-			</div>
+                    <div class = 'iosSliderButtons'>
+                        <div class = 'button'></div>
+                        <div class = 'button'></div>
+                        <div class = 'button'></div>
+                        <div class = 'button'></div>
+                        <div class = 'button'></div>
+                        <div class = 'button'></div>
+                        <div class = 'button'></div>
+                        <div class = 'button'></div>
+                    </div>
 		
-		</div>
-                
-            <h2>Current venue</h2>    
+			</div>
+        
 
+            
+            
 			</div>
 			<!--! end of #main -->
 
 
-		</div>
-		<!--! end of #container -->
+
 
 		<footer>
-
-
             
 <!--            			<ul class="icons" id="bottom">
 				<a href="#"><li>Messages<span
@@ -177,18 +191,49 @@
 			</ul>-->
             
             <nav>      
-  <ul class="nav">       
-    <li><a href="#" class="icon-mail"></a></li>
-    <li><a href="#" class="icon-cog"></a></li>
-    <li><a href="#" class="icon-user"></a></li>
-    <li><a href="#" class="icon-cd"></a></li>
-    <li><a href="#" class="icon-top-list"></a></li>
-  </ul> 
-</nav>
+                <ul class="nav">       
+                    <li><a href="messages.html" class="icon-mail"></a><span
+						id="unread">2</span></li>
+                    <li><a href="time.html" class="icon-cog"></a></li>
+                    <li><a href="profile.html" class="icon-user"></a></li>
+                    <li><a href="gang.html" class="icon-gang"></a></li>
+                    <li><a href="leaderboard-menu.html" class="icon-leaderboard"></a></li>
+                </ul>
+           
+			</nav>
 
 		</footer>
 
 	</div>
+<script>
 
+
+	</script>
+    <script>
+jQuery({someValue: 0}).delay(300).animate({someValue: 110}, {
+	duration: 1000,
+	easing:'swing',
+	step: function() {
+		$('#sprayed').text(Math.ceil(this.someValue) + "");
+	}
+});
+
+jQuery({someValue2: 0}).delay(300).animate({someValue2:60}, {
+	duration: 1000,
+	easing:'swing',
+	step: function() { 
+		 $('#erased').text (Math.ceil(this.someValue2) + "");
+	}
+});
+
+	</script>
+    
+<script src="js/fonts/cufon-yui.js"></script>
+<script src="js/fonts/MisterEarl_BT_400.font.js"></script> 
+<script type="text/javascript">
+	Cufon.replace('h2, h4,.text1, .text2', {
+		textShadow: '0 2px 2px #6B8F98'
+	});
+</script>
 </body>
 </html>

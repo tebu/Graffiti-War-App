@@ -7,17 +7,59 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 
+/** Spray.html **/
+
+var spray = function() {
+	
+	var venue = new Venue(12434, "Puistola");
+	var msg = protocol.spray(user, venue);
+	socket.send(msg);
+}
+
+$(document).ready(function() {
+	var beepOne = $("#beep-one")[0];
+	$("#spray-can")
+		.click(function () {
+			beepOne.play();
+		});
+});
+		
+$(document).ready(function() {
+	$("p#progress").delay(2000).fadeIn(1000);
+		$("p#progress").delay(14000).fadeOut(200);	
+		$("p#finished").delay(17000).fadeIn(1000);
+		$("#cancel").delay(15000).fadeOut(200);
+		$("#proceed").css("display", "none");
+		$("#proceed").delay(16000).fadeIn(500);
+		$("#spray-burst").css("display", "none");
+		$("#spray-burst").delay(4000).fadeIn(10000);
+		$("#spray-burst2").css("display", "none");
+		$("#spray-burst2").delay(6000).fadeIn(10000);
+		$("#spray-can").click(function () {
+			  $(this).effect("shake", { times:10 }, 100);
+	});
+});
+	
+$(document).ready(function() {
+		$('.progress .bar').progressbar({
+			transition_delay: 1500,
+			display_text: 1
+	});          
+});
+
 // iosSlider - rotating banner (http://www.iosscripts.com/iosslider/)
 $(document).ready(function() {
 
 	$('.iosSlider').iosSlider({
 		scrollbar: false,
 		snapToChildren: true,
+		snapSlideCenter: true,
 		desktopClickDrag: true,
+		keyboardControls: true,
 		scrollbarLocation: 'top',
 		scrollbarMargin: '10px 10px 0 10px',
 		scrollbarBorderRadius: '0',
-		responsiveSlideWidth: true,
+		responsiveSlides: true,
 		navSlideSelector: $('.iosSliderButtons .button'),
 		infiniteSlider: false,
 		startAtSlide: '1',
@@ -73,6 +115,20 @@ $(document).ready(function() {
 	}
 	
 });
+
+/** Leaderboard **/
+$(document).ready(function() { 
+    // call the tablesorter plugin 
+    $("table").tablesorter({ 
+        // sort on the first column and third column, order asc 
+        sortList: [[0,0]] ,
+		 headers: { 1: { sorter: false} }
+    }); 
+});
+
+
+
+
 
 
 var socket;
@@ -272,46 +328,6 @@ var getCategories = function(venues) {
 
 
 
-
-
-/** Spray.html **/
-
-
-
-var spray = function() {
-	
-	var venue = new Venue(12434, "Puistola");
-	var msg = protocol.spray(user, venue);
-	socket.send(msg);
-	
-	$("p#progress").delay(2000).fadeIn(1000);
-	$("p#progress").delay(14000).fadeOut(200);	
-	$("p#finished").delay(17000).fadeIn(1000);
-	$("#cancel").delay(15000).fadeOut(200);
-	$("#proceed").css("display", "none");
-	$("#proceed").delay(16000).fadeIn(500);
-	$("#spray-burst").css("display", "none");
-	$("#spray-burst").delay(4000).fadeIn(10000);
-	$("#spray-burst2").css("display", "none");
-	$("#spray-burst2").delay(6000).fadeIn(10000);
-	$("#spray-can").click(function () {
-		  $(this).effect("shake", { times:10 }, 100);
-	});
-	
-	var beepOne = $("#beep-one")[0];
-	$("#spray-can")
-		.click(function () {
-			beepOne.play();
-		});
-		
-	$(document).ready(function() {
-		$('.progress .bar').progressbar({
-			  transition_delay: 1500,
-			  display_text: 1
-		});          
-	});
-}
-
 // Modal box for showing help etc.
 $(document).ready(function() {
 	$("#tip-trigger").leanModal({ top : 200, overlay : 0.8, closeButton: ".modal_close" });
@@ -334,14 +350,7 @@ $(document).ready(function($) {
        });
 });
 
-$(document).ready(function() { 
-    // call the tablesorter plugin 
-    $("table").tablesorter({ 
-        // sort on the first column and third column, order asc 
-        sortList: [[0,0]] ,
-		 headers: { 1: { sorter: false} }
-    }); 
-});
+
 
 
 
@@ -354,19 +363,8 @@ $("#back")
       });
 });*/
 
-/*var myScroll;
-function loaded() {
-	myScroll = new iScroll('scroller-wrapper');
-}
 
-var myScroll2;
-function loaded2() {
-	myScroll2 = new iScroll('scroller-wrapper2');
-}
 
-$( '#leaderboard-gangs' ).live( 'pagebeforeshow',loaded);
-
-$( '#leaderboard-players' ).live( 'pagebeforeshow',loaded2);*/
 
 
 
@@ -397,3 +395,25 @@ function haversine(lon1, lat1, lon2, lat2) {
 function toRad(deg) {
 	return deg * Math.PI / 180;
 }
+
+
+
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper');
+}
+
+/*var myScroll2;
+function loaded2() {
+	myScroll2 = new iScroll('wrapper2');
+}*/
+
+/*$( '#leaderboard-gangs' ).live( 'pagebeforeshow',loaded);*/
+
+$( '#leaderboard-players' ).live( 'pagebeforeshow',loaded);
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+
+

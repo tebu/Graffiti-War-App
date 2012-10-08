@@ -6,16 +6,36 @@
 <title>Street Art Gangs</title>
 <meta name="description" content="Street Art Gangs demo">
 <meta name="author" content="Team NIMO">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="target-densityDpi=device-dpi" />
 
-<!-- Main Stylesheet -->
 <link rel="stylesheet" href="css/style.css">
 
+<!-- Cordova -->
+<script type="text/javascript" src="cordova-1.8.1.js"></script>
 
 <!-- jQuery-->
-<script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
 
+<!--Some validation for demo purpose-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#login_btn').hide();
+    $('input').change(function(e) {
+        if ($('#username').val() && $('#password').val() && validatePassword($('#password').val())) {
+            $('#login_btn').show();
+        }
+    });
+});
+
+var validatePassword = function(password) {
+    var re = /foobar/;
+    return re.test(password);
+};
+</script>
+
+<!-- WebSocket -->
+<script type="text/javascript" src="js/libs/websocket.js"></script>
 
 <!-- Application models-->
 <script src="js/models/user.js"></script>
@@ -25,6 +45,7 @@
 
 <!-- Application messaging protocol-->
 <script src="js/protocol.js"></script>
+
 <!-- Application logic-->
 <script src="js/app.js"></script>
 
@@ -32,29 +53,43 @@
 
 <body>
 
-	<div data-role="page" id="login">
-		<div id="container_login">
+
+	<div id="container_login">
 
 			<div id="main" role="main">
-     
-                <div id="login-box">
-                    <h2>Username:</h2>
-                    <input type="text" size="15" name="username" id="username" />
+            
+            <div id="logo"></div>
+            
+			<div id="login-box">
+           		<form id="login" method="link" action="index.html">
+        			<h2>What's your name dude?</h2>
+                    <input type="text" size="15" name="username" id="username" class="required" />
                     <br />
-                    <h2>Password:</h2>
-                    <input type="password" size="15" name="password" id="password" />
+                    <h2>Enter password</h2>
+                    <input type="password" size="15" name="password" id="password" class="required" />
                     <br />
-                    <input type="submit" accesskey="l" id="login_btn" name="login" value="Okey" />        
-                </div>
-			
+                    <input type="submit" accesskey="l" id="login_btn" name="login" value="I'm ready" />   
+                </form>
+                    
+            </div>
+			<!--! end of #login-box -->
+            
+            <div id="code"></div>
 
-			</div>
+		  </div>
         	<!--! end of #main -->
 		
 		</div>
     	<!--! end of #container -->       
-	</div>
 
+
+<script src="js/fonts/cufon-yui.js"></script>
+<script src="js/fonts/MisterEarl_BT_400.font.js"></script> 
+<script type="text/javascript">
+	Cufon.replace('h2', {
+		textShadow: '0 2px 2px #6B8F98'
+	});
+</script>
 
 </body>
 </html>

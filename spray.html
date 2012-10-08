@@ -10,12 +10,20 @@
 
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="css/jquery.mobile-1.1.1.css">
 
 <!-- jQuery-->
-<script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.easing.1.3.js"></script>
 
+<!-- jQuery Mobile-->
+<!--<script src="js/libs/jquery.mobile-1.1.1.js"></script>-->
+
+
+
+<!-- Loader-->
+<script type="text/javascript" src="js/libs/bootstrap-progressbar.js"></script>
 
 <!-- Application models-->
 <script src="js/models/user.js"></script>
@@ -35,42 +43,38 @@
 	<div data-role="page" id="spray">
 		<div id="container_spray">
 
-			<div id="main">
+    	<div id="spray-burst"></div>
+        <div id="spray-burst2"></div>
+        <div id="spray-can"></div>
+        
 
-				<div id="spray-burst"></div>
-				<div id="spray-burst2"></div>
-				<div id="spray-can"></div>
+		   	<audio id="beep-one" preload="auto">
+				<source src="sound/sound.mp3"></source>
+				<source src="sound/sound.ogg"></source>
+				Your browser isn't invited for super fun time.
+			</audio>
 
-				<audio id="beep-one" preload="auto">
-					<source src="sound/sound.mp3"></source>
-					<source src="sound/sound.ogg"></source>
-					Your browser isn't invited for super fun time.
-				</audio>
+    <!--Loader-->
+    <div id="loading">
 
+        <div class="progress">
+            <div class="bar two-sec-ease-in-out" data-percentage="100"></div>
+        </div>
+                
+    </div>
+    
+    <p id="progress">Spraying in progress</p>
+    <p id="finished">Cool, it's done!</p>
+    <!--Loader ends-->
 
-				<!--Loader-->
-				<div id="loading">
-
-					<div class="progress">
-            			<div class="bar two-sec-ease-in-out" data-percentage="100"></div>
-       				 </div>
-
-				</div>
-
-				<p id="progress">Spraying in progress</p>
-				<p id="finished">Cool, it's done!</p>
-				<!--Loader ends-->
-
-				<ul class="buttons">
-					<li id="cancel"><a href="#"></a></li>
-					<li id="proceed"><a href="#"></a></li>
-				</ul>
-
-			</div>
-			<!--! end of #main -->
-
-		</div>
-		<!--! end of #container -->
+    <ul class="buttons">
+        <li id="cancel"><a href="index.html"></a></li>
+        <li id="proceed"><a href="#"></a></li>
+    </ul>
+    
+ 	</div><!--! end of #main -->
+     
+  </div><!--! end of #container -->
 	</div>
 
 
