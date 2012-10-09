@@ -6,21 +6,15 @@
 <title>Street Art Gangs</title>
 <meta name="description" content="Street Art Gangs demo">
 <meta name="author" content="Team NIMO">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="target-densityDpi=device-dpi" />
 
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/jquery.mobile-1.1.1.css">
 
 <!-- jQuery-->
 <script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery.easing.1.3.js"></script>
-
-<!-- jQuery Mobile-->
-<!--<script src="js/libs/jquery.mobile-1.1.1.js"></script>-->
-
-
 
 <!-- Loader-->
 <script type="text/javascript" src="js/libs/bootstrap-progressbar.js"></script>
@@ -45,14 +39,8 @@
 
     	<div id="spray-burst"></div>
         <div id="spray-burst2"></div>
-        <div id="spray-can"></div>
-        
-
-		   	<audio id="beep-one" preload="auto">
-				<source src="sound/sound.mp3"></source>
-				<source src="sound/sound.ogg"></source>
-				Your browser isn't invited for super fun time.
-			</audio>
+         <div id="spray-burst3"></div>
+       
 
     <!--Loader-->
     <div id="loading">
@@ -62,23 +50,27 @@
         </div>
                 
     </div>
+    <!--Loading ends-->
     
     <p id="progress">Spraying in progress</p>
     <p id="finished">Cool, it's done!</p>
-    <!--Loader ends-->
-
-    <ul class="buttons">
-        <li id="cancel"><a href="index.html"></a></li>
-        <li id="proceed"><a href="#"></a></li>
-    </ul>
+    
+        <a href="index.html"><div id="cancel">Cancel</div></a>
+        <a href="#"><div id="proceed">Proceed</div></a>
     
  	</div><!--! end of #main -->
      
   </div><!--! end of #container -->
 	</div>
-
-
-
+    
+<!-- Font replacing using Cufon-->  
+<script src="js/fonts/cufon-yui.js"></script>
+<script src="js/fonts/MisterEarl_BT_400.font.js"></script> 
+<script type="text/javascript">
+	Cufon.replace('#progress, #finished', {
+		textShadow: '0 2px 2px #6B8F98'
+	});
+</script>
 
 </body>
 </html>

@@ -30,11 +30,13 @@ $(document).ready(function() {
 		$("p#finished").delay(17000).fadeIn(1000);
 		$("#cancel").delay(15000).fadeOut(200);
 		$("#proceed").css("display", "none");
-		$("#proceed").delay(16000).fadeIn(500);
+		$("#proceed").delay(18000).fadeIn(100);
 		$("#spray-burst").css("display", "none");
 		$("#spray-burst").delay(4000).fadeIn(10000);
 		$("#spray-burst2").css("display", "none");
 		$("#spray-burst2").delay(6000).fadeIn(10000);
+				$("#spray-burst3").css("display", "none");
+		$("#spray-burst3").delay(1000).fadeIn(10000);
 		$("#spray-can").click(function () {
 			  $(this).effect("shake", { times:10 }, 100);
 	});

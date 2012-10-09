@@ -8,9 +8,7 @@
 <meta name="author" content="Team NIMO">
 <meta name="viewport" content="target-densityDpi=device-dpi" />
 
-
 <link rel="stylesheet" href="css/style.css">
-
 
 <!-- Cordova -->
 <script type="text/javascript" src="cordova-1.8.1.js"></script>
@@ -19,10 +17,8 @@
 <script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
 
-
 <!-- WebSocket -->
 <script type="text/javascript" src="js/libs/websocket.js"></script>
-
 
 <!-- Application models-->
 <script src="js/models/user.js"></script>
@@ -36,13 +32,8 @@
 <!-- iosSlider plugin -->
 <script src = "js/libs/jquery.iosslider.js"></script>
 
-
 <!-- Application logic-->
-<script src="js/app.js"></script>
-
-
-
-	
+<script src="js/app.js"></script>	
 
 </head>
 
@@ -171,25 +162,12 @@
 		
 			</div>
         
-
-            
             
 			</div>
 			<!--! end of #main -->
 
-
-
-
 		<footer>
-            
-<!--            			<ul class="icons" id="bottom">
-				<a href="#"><li>Messages<span
-						id="unread">2</span></li></a>
-				<a href="#"><li>Equipment</li></a>
-				<a href="gang.html" data-transition="slide"><li>Gang</li></a>
-				<a href="profile.html" data-transition="slide"><li>Profile</li></a>
-			</ul>-->
-            
+                        
             <nav>      
                 <ul class="nav">       
                     <li><a href="messages.html" class="icon-mail"></a><span
@@ -205,29 +183,27 @@
 		</footer>
 
 	</div>
-<script>
-
-
-	</script>
-    <script>
-jQuery({someValue: 0}).delay(300).animate({someValue: 110}, {
-	duration: 1000,
-	easing:'swing',
-	step: function() {
-		$('#sprayed').text(Math.ceil(this.someValue) + "");
-	}
-});
-
-jQuery({someValue2: 0}).delay(300).animate({someValue2:60}, {
-	duration: 1000,
-	easing:'swing',
-	step: function() { 
-		 $('#erased').text (Math.ceil(this.someValue2) + "");
-	}
-});
-
-	</script>
     
+<!-- Animating scores-->  
+<script>
+	jQuery({someValue: 0}).delay(300).animate({someValue: 110}, {
+		duration: 1000,
+		easing:'swing',
+		step: function() {
+			$('#sprayed').text(Math.ceil(this.someValue) + "");
+		}
+	});
+	
+	jQuery({someValue2: 0}).delay(300).animate({someValue2:60}, {
+		duration: 1000,
+		easing:'swing',
+		step: function() { 
+			 $('#erased').text (Math.ceil(this.someValue2) + "");
+		}
+	});
+</script>
+
+<!-- Font replacing using Cufon-->  
 <script src="js/fonts/cufon-yui.js"></script>
 <script src="js/fonts/MisterEarl_BT_400.font.js"></script> 
 <script type="text/javascript">

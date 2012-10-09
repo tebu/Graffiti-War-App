@@ -640,7 +640,7 @@ ul#locations {
    ========================================================================== */
 
 #container_spray {	
-	background:	url(../img/bg-with-shakey-cans.png) no-repeat,
+/*	background:	url(../img/bg-with-shakey-cans.png) no-repeat,
  				-moz-linear-gradient(top, #050738 0%, #050738 36%, #14bae8 100%);
 	background: url(../img/bg-with-shakey-cans.png) no-repeat, 
 				-webkit-gradient(linear, left top, left bottom, color-stop(0%,#050738), color-stop(36%,#050738), color-stop(100%,#14bae8));
@@ -651,54 +651,221 @@ ul#locations {
 	background: url(../img/bg-with-shakey-cans.png) no-repeat, 
 				-ms-linear-gradient(top, #050738 0%,#050738 36%,#14bae8 100%);
 	background: url(../img/bg-with-shakey-cans.png) no-repeat, 
-				linear-gradient(to bottom, #050738 0%,#050738 36%,#14bae8 100%);
+				linear-gradient(to bottom, #050738 0%,#050738 36%,#14bae8 100%);*/
+	background: #000a18;
+
 	width: 1280px;
-  	height: 1920px;
-	margin: 0 auto;
+	height: 100%;
+	min-height: 1920px;
+	max-height: 1920px;
+	margin: 0 auto 0 auto;
+	position: relative;
+	overflow: hidden;
 	
 }
-ul.buttons {
-	width: 1280px;
+#cancel, #proceed {
+	border-radius: 50%;
+	border: none;
+	color: #fff;
+    display: block;
+    font-size: 3em;
+    height: 264px;
+	width: 264px;
+    line-height: 6em;
+	font-family: KomikaAxisRegular;
+    margin-left: -132px;
+	left: 49%;
+    position: absolute;
+	text-align: center;
+    text-decoration: none;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	bottom: 10%;
+			
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
+	-ms-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	
+	-webkit-animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
+	-ms-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+	animation-timing-function: ease;
+	
+	-moz-animation-duration: .5s;
+	-webkit-animation-duration: .5s; 
+	-ms-animation-duration: .5s;
+	-o-animation-duration: .5s;
+	animation-duration: .5s;	
 }
-ul.buttons li {
-	z-index: 10;
-	position: relative;
-	top: 1500px;
-	float: left
+#cancel {	
+	background: #DD4D37;
+	-webkit-animation-name: expand2;
+	-moz-animation-name: expand2;
+	-ms-animation-name: expand2;
+	-o-animation-name: expand2;
+	animation-name: expand2;		 
 }
-li#cancel {
-	background:url(../img/cancel.png) no-repeat;
-	width: 134px;
-	height: 134px;
+
+
+@-moz-keyframes expand2 {
+ from {
+   -moz-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -moz-transform: scale(1);
+   transform: scale(1);
+ }
+
 }
-li#cancel:active, li#proceed:active {
-	top: 1505px;
-}	
-li#proceed {
-	background:url(../img/proceed.png) no-repeat;
-	width: 134px;
-	height: 134px;
-	float: right;
-	margin-right: 80px;
+
+@-webkit-keyframes "expand2" {
+ from {
+   -webkit-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -webkit-transform: scale(1);
+   transform: scale(1);
+ }
+
 }
+
+@-ms-keyframes "expand2" {
+ from {
+   -ms-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -ms-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-o-keyframes "expand2" {
+ from {
+   -o-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -o-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+#cancel:hover, #cancel:active, #cancel:focus {
+	text-decoration: none;
+    box-shadow: 0 0 30px #fff inset, 0 0 60px #FF3B00;
+}
+	
+#proceed {	
+	background: #30B392;	
+	-moz-animation-name: expand3;
+	-moz-animation-delay:18s;  
+}
+
+@-moz-keyframes expand3 {
+ from {
+   -moz-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -moz-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-webkit-keyframes "expand3" {
+ from {
+   -webkit-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -webkit-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-ms-keyframes "expand3" {
+ from {
+   -ms-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -ms-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-o-keyframes "expand3" {
+ from {
+   -o-transform: scale(0);
+   transform: scale(0);
+ }
+ to {
+   -o-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+#proceed:hover, #proceed:active, #proceed:focus {
+	text-decoration: none;
+    box-shadow: 0 0 30px #fff inset, 0 0 60px #00F9BB;
+}
+
 #spray-burst {
 	background: url(../img/spray-burst.png) center no-repeat;
-	width: 650px;
-	height: 907px;
+	width: 232px;
+	height: 262px;
 	position: absolute;
-	top: 50px;
+	top: 42%;
 	left: 50%;
-	margin-left: -300px;
+	margin-left: -166px;
 }
 #spray-burst2 {
 	background: url(../img/spray-burst2.png) center no-repeat;
-	width: 650px;
-	height: 907px;
+	width: 666px;
+	height: 775px;
 	position: absolute;
-	top: -100px;
+	top: 30%;
 	left: 50%;
-	margin-left: -300px;
+	margin-left: -333px;
 }
+@-moz-keyframes spin {  
+from {  
+    -moz-transform: scale(100);  
+}  
+to {  
+    -moz-transform: scale(0);  
+    } 
+}
+#spray-burst3 {
+	background: url(../img/spray-burst3.png) center no-repeat;
+	width: 1262px;
+	height: 1077px;
+	position: absolute;
+	top: 22%;
+	left: 52%;
+	margin-left: -631px;
+	    -moz-animation-name: spin; 
+    -moz-animation-iteration-count: 6; 
+    -moz-animation-timing-function: ease;
+    -moz-animation-duration: .5s; 
+}
+
+
+
+
 #spray-can {
 	background: url(../img/spray-can2.png) no-repeat;
 	width: 376px;
@@ -710,47 +877,54 @@ li#proceed {
 }
 #loading {
 	position:relative;
-	top: 500px;
-	width: 400px;
+	top: 890px;
+	width: 20%;
 	margin: 0 auto;
-	border-bottom: 1px solid #60beff;
+	border-top: 1px solid #00F2FF;
+	border-bottom: 1px solid #00F2FF;
 }
 .progress .bar {
-    -moz-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
     -moz-transition: width 0.6s ease 0s;
-	background: #1aa1ff;
-    color: #1aa1ff;
-    font-size: 7em;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #19f7ff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#19f7ff));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#19f7ff 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#19f7ff 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#19f7ff 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#19f7ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#19f7ff',GradientType=0 );
+    color: #FCFEFF;
+    font-size: 6em;
     height: 10px;
     text-align: center;
-    text-shadow: 0 11px 5px rgba(0, 0, 0, 0.9);
+  	text-shadow: 0 -2px 2px rgba(0, 22, 27, 0.6);
     width: 0;
-	box-shadow: 0 -25px 0 rgba(0, 0, 0, 0.15) inset
 }
 .progress .bar.two-sec-ease-in-out {
-	-webkit-transition: width 15s ease-in-out;
-	-moz-transition: width 15s ease-in-out;
-	-ms-transition: width 15s ease-in-out;
-	-o-transition: width 15s ease-in-out;
-	transition: width 15s ease-in-out;
+	-webkit-transition: all 15s ease-in-out;
+	-moz-transition: all 15s ease-in-out;
+	-ms-transition: all 15s ease-in-out;
+	-o-transition: all 15s ease-in-out;
+	transition: all 15s ease-in-out;
 }
 p#progress {
-	font-size: 2em;
+	font-size: 6em;
 	position: absolute;
-	top: 650px;
-	width: 310px;
+	top: 350px;
+	width: 500px;
 	text-align:center;
-	margin-left: -155px;
+	margin-left: -250px;
 	left: 50%;
 	display:none
 }
 p#finished {
-	font-size: 2em;
+	font-size: 6em;
 	position: absolute;
-	top: 650px;
-	width: 310px;
+	top: 350px;
+	width: 410px;
 	text-align:center;
-	margin-left: -155px;
+	margin-left: -205px;
 	left: 50%;
 	display:none
 }
