@@ -1,0 +1,326 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+
+<title>Street Art Gangs</title>
+<meta name="description" content="Street Art Gangs demo">
+<meta name="author" content="Team NIMO">
+<meta name="viewport" content="target-densityDpi=device-dpi" />
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- jQuery-->
+<script type="text/javascript" src="js/libs/jquery.1.7.2.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
+
+<!-- Application models-->
+<script src="js/models/user.js"></script>
+<script src="js/models/localization.js"></script>
+<script src="js/models/venue.js"></script>
+<script src="js/models/team.js"></script>
+
+<!-- Application messaging protocol-->
+<script src="js/protocol.js"></script>
+
+<!-- iosSlider plugin -->
+<script src = "js/libs/jquery.iosslider.js"></script>
+
+<!-- NiceScroll-->
+<script type="text/javascript" src="js/libs/jquery.nicescroll.min.js"></script>
+<script>
+  $(document).ready(function() {  
+	$("#scroller").niceScroll({cursorcolor:"#DE5B1A"});
+	$("#scroller2").niceScroll({cursorcolor:"#DE5B1A"});
+}); 
+</script>
+
+<!-- Application logic-->
+<script src="js/app.js"></script>
+
+</head>
+
+<body>
+
+	<div data-role="page" id="leaderboard-players">
+		<div class="container_leaderboard">
+
+			<div id="main" role="main">
+            
+            	<a href="leaderboard-menu.html"><div id="go_back">Back</div></a>
+            
+           		     
+                                 
+                <div class = 'iosSlider2'>
+                    
+                        <div class = 'slider2'>
+                        
+                            <div class = 'item2' id = 'item11'>
+                                <h1>Leaderboards<span>Which <em>player</em> rules the City of Oulu?</span></h1> 
+    
+                                <div id="scroller">
+                                
+                                    <table id="myTable" class="tablesorter"> 
+                                            <thead> 
+                                            <tr> 
+                                                <th class="header place">#</th> 
+                                                <th>Player</th> 
+                                                <th class="header tags-total">Tags</th> 
+                                                <th class="header erased-total">Erased</th> 
+                                            </tr> 
+                                            </thead> 
+                                            <tbody> 
+                                            <tr class="odd"> 
+                                                <td>01.</td> 
+                                                <td>Bobby</td> 
+                                                <td>0205</td> 
+                                                <td>0147</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>02.</td> 
+                                                <td>Bruce</td> 
+                                                <td>0191</td> 
+                                                <td>0135</td> 
+                                            </tr> 
+                                            <tr class="odd"> 
+                                                <td>03.</td> 
+                                                <td>Billy</td> 
+                                                <td>0189</td> 
+                                                <td>0139</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>04.</td> 
+                                                <td>Tommy</td> 
+                                                <td>0184</td> 
+                                                <td>0111</td> 
+                                            </tr>
+                                            <tr class="odd"> 
+                                                <td>05.</td> 
+                                                <td>Brad</td> 
+                                                <td>0172</td> 
+                                                <td>0099</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>06.</td> 
+                                                <td>Peggy</td> 
+                                                <td>0144</td> 
+                                                <td>0104</td> 
+                                            </tr> 
+                                            <tr class="odd"> 
+                                                <td>07.</td> 
+                                                <td>Robby</td> 
+                                                <td>0143</td> 
+                                                <td>0074</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>08.</td> 
+                                                <td>Maggie</td> 
+                                                <td>0129</td> 
+                                                <td>0100</td> 
+                                            </tr>
+                                            <tr class="odd"> 
+                                                <td>09.</td> 
+                                                <td>George</td> 
+                                                <td>0114</td> 
+                                                <td>0039</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>10.</td> 
+                                                <td>Paul</td> 
+                                                <td>0107</td> 
+                                                <td>0110</td> 
+                                            </tr> 
+                                            <tr class="odd" id="my-gang"> 
+                                                <td>22.</td> 
+                                                <td>Me</td> 
+                                                <td>0096</td> 
+                                                <td>0056</td> 
+                                            </tr>   
+                                            </tbody> 
+                                        </table>
+            
+                                    </div>
+                            </div>
+    
+            
+                            
+                            <div class = 'item2' id = 'item22'>
+                            <h1>Leaderboards<span>Which <em>gang</em> owns them all?</span></h1> 
+                            
+                                <div id="scroller2">
+                                    <table id="myTable2" class="tablesorter"> 
+                                    <thead> 
+                                    <tr> 
+                                        <th class="header place">#</th> 
+                                        <th>Gang</th> 
+                                        <th class="header tags-total">Tags</th> 
+                                        <th class="header erased-total">Erased</th> 
+                                    </tr> 
+                                    </thead> 
+                                    <tbody> 
+                                    <tr class="odd"> 
+                                        <td>01.</td> 
+                                        <td>Kadunvaltaajat</td> 
+                                        <td>0205</td> 
+                                        <td>0147</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>02.</td> 
+                                        <td>Taistelutoverit</td> 
+                                        <td>0191</td> 
+                                        <td>0135</td> 
+                                    </tr> 
+                                    <tr class="odd"> 
+                                        <td>03.</td> 
+                                        <td>Kannuttajat</td> 
+                                        <td>0189</td> 
+                                        <td>0139</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>04.</td> 
+                                        <td>New Wave</td> 
+                                        <td>0184</td> 
+                                        <td>0111</td> 
+                                    </tr>
+                                    <tr class="odd"> 
+                                        <td>05.</td> 
+                                        <td>The Rebels</td> 
+                                        <td>0172</td> 
+                                        <td>0099</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>06.</td> 
+                                        <td>TagzCrew</td> 
+                                        <td>0144</td> 
+                                        <td>0104</td> 
+                                    </tr> 
+                                    <tr class="odd"> 
+                                        <td>07.</td> 
+                                        <td>Kings_of_Graffities</td> 
+                                        <td>0143</td> 
+                                        <td>0074</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>08.</td> 
+                                        <td>theElementz</td> 
+                                        <td>0129</td> 
+                                        <td>0100</td> 
+                                    </tr>
+                                    <tr class="odd"> 
+                                        <td>09.</td> 
+                                        <td>StreetArtKings</td> 
+                                        <td>0114</td> 
+                                        <td>0039</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>10.</td> 
+                                        <td>Tags Master Squad</td> 
+                                        <td>0107</td> 
+                                        <td>0110</td> 
+                                    </tr> 
+                                    <tr class="odd" id="my-gang"> 
+                                        <td>11.</td> 
+                                        <td>My Gang</td> 
+                                        <td>0096</td> 
+                                        <td>0056</td> 
+                                    </tr>
+                                    <tr class="even"> 
+                                        <td>12.</td> 
+                                        <td>TagzCrew</td> 
+                                        <td>0144</td> 
+                                        <td>0104</td> 
+                                    </tr> 
+                                    <tr class="odd"> 
+                                        <td>13.</td> 
+                                        <td>Kings_of_Graffities</td> 
+                                        <td>0143</td> 
+                                        <td>0074</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>14.</td> 
+                                        <td>theElementz</td> 
+                                        <td>0129</td> 
+                                        <td>0100</td> 
+                                    </tr>
+                                    <tr class="odd"> 
+                                        <td>15.</td> 
+                                        <td>GraffitiesBoyz</td> 
+                                        <td>0114</td> 
+                                        <td>0039</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>16.</td> 
+                                        <td>AwsomeGang</td> 
+                                        <td>0107</td> 
+                                        <td>0110</td> 
+                                    </tr> 
+                                    <tr class="odd"> 
+                                        <td>17.</td> 
+                                        <td>CoolTaggers</td> 
+                                        <td>0096</td> 
+                                        <td>0056</td> 
+                                    </tr>
+                                     <tr class="even"> 
+                                        <td>18.</td> 
+                                        <td>Rev0lution</td> 
+                                        <td>0129</td> 
+                                        <td>0100</td> 
+                                    </tr>
+                                    <tr class="odd"> 
+                                        <td>19.</td> 
+                                        <td>ThaCitizens</td> 
+                                        <td>0114</td> 
+                                        <td>0039</td> 
+                                    </tr> 
+                                    <tr class="even"> 
+                                        <td>20.</td> 
+                                        <td>OuluDudez</td> 
+                                        <td>0107</td> 
+                                        <td>0110</td> 
+                                    </tr>           
+                                    </tbody> 
+                                    </table>
+    
+                                </div>
+                            </div>
+                            
+                        
+                        </div>
+                        <!--! end of #slider2 -->
+                
+                        <div class = 'iosSliderButtons2'>
+                            <div class = 'button2'></div>
+                            <div class = 'button2'></div>
+                        </div>
+            
+                </div>
+               <!--! end of .ioSlider2 -->
+            	
+                 
+			        
+			</div>
+        	<!--! end of #main -->
+		
+		</div>
+    	<!--! end of #container --> 
+
+	</div>
+    
+<!-- Font replacing using Cufon-->  
+<script src="js/fonts/cufon-yui.js"></script>
+<script src="js/fonts/MisterEarl_BT_400.font.js"></script> 
+<script type="text/javascript">
+	Cufon.replace('h1, h1 span, #myTable, #myTable2', {
+		textShadow: '0 2px 2px #6B8F98'
+	});
+		Cufon.replace('em', {
+		textShadow: '0 2px 2px #fff'
+	});
+</script>
+
+<!-- TableSorter-->
+<script src="js/libs/jquery.tablesorter.js"></script>
+
+</body>
+</html>

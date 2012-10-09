@@ -841,14 +841,6 @@ ul#locations {
 	left: 50%;
 	margin-left: -333px;
 }
-@-moz-keyframes spin {  
-from {  
-    -moz-transform: scale(100);  
-}  
-to {  
-    -moz-transform: scale(0);  
-    } 
-}
 #spray-burst3 {
 	background: url(../img/spray-burst3.png) center no-repeat;
 	width: 1262px;
@@ -857,15 +849,11 @@ to {
 	top: 22%;
 	left: 52%;
 	margin-left: -631px;
-	    -moz-animation-name: spin; 
+	-moz-animation-name: spin; 
     -moz-animation-iteration-count: 6; 
     -moz-animation-timing-function: ease;
     -moz-animation-duration: .5s; 
 }
-
-
-
-
 #spray-can {
 	background: url(../img/spray-can2.png) no-repeat;
 	width: 376px;
@@ -1341,30 +1329,60 @@ span#sprayed-avg, span#erased-avg, span#ranking {
    ========================================================================== */
 
 .container_leaderboard {	
-	background: #E68C00 url(../img/bg-leaderboard.jpg) no-repeat;
+	background: #cbedff;
+	background: -moz-radial-gradient(center, ellipse cover,  #cbedff 0%, #a3ccee 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#cbedff), color-stop(100%,#a3ccee));
+	background: -webkit-radial-gradient(center, ellipse cover,  #cbedff 0%,#a3ccee 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #cbedff 0%,#a3ccee 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #cbedff 0%,#a3ccee 100%);
+	background: radial-gradient(ellipse at center,  #cbedff 0%,#a3ccee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbedff', endColorstr='#a3ccee',GradientType=1 );
 	width: 1280px;
-  	height: 1920px;
-	margin: 0 auto;	
-	color: #fff;
-	font-family:'KomikaAxisRegular';
-	text-shadow: 0 1px 2px #111;
+	height: 100%;
+	min-height: 1920px;
+	max-height: 1920px;
+	margin: 0 auto 0 auto;
+	position: relative;
+	overflow: hidden;
 }
 .container_leaderboard h1 {
 	color: #fff;
-	font-size: 5em;
+	font-size: 8em;
 	position:relative;
-	top: -80px
+	top: -50px
 }
-a#back {
-	width: 134px;
-	height: 156px;
-	position: relative;
-	top: 100px;
-	left: 50px;
-	z-index: 100
+.container_leaderboard h1 span {
+	display: block;
+	font-size: 70%;
 }
-a#back img:active {
-	top: 115px;
+.container_leaderboard h1 em {
+	color:#DE5B1A;
+	text-shadow: none !important
+}
+#go_back {
+	background:#F90;
+	border-radius: 50%;
+	border: none;
+	color: #fff;
+    display: block;
+    font-size: 3em;
+    height: 164px;
+	width: 164px;
+    line-height: 4em;
+	font-family: KomikaAxisRegular;
+	margin-left: -82px;
+    position: absolute;
+	text-align: center;
+    text-decoration: none;
+	left: 50%;
+	bottom: 5%;	
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}
+#go_back:hover, #go_back:active, #go_back:focus {
+	text-decoration: none;
+    box-shadow: 0 0 30px #fff inset, 0 0 60px #F90;
 }	
 .ranking li#gang {
 	background:url(../img/profile-small.png) no-repeat;
@@ -1373,33 +1391,24 @@ a#back img:active {
 	float: right;
 	margin-right: 80px;
 }
-.ranking {
-	position:relative;
-	top: 40px;
-	width: 98%;
-	margin: 0 auto;
-}
-.wrapper2 {
-
-}
 table.tablesorter {
 	margin:10px 0pt 15px;
 	width: 100%;
 	text-align: left;
 }
 table.tablesorter tr {
-	font-size: 3em;
+	font-size: 5em;
 }
 table.tablesorter td {
 	 padding: 45px 30px !important;
-	 border-right: 6px dashed #FFD85B;
+	 border-right: 1px solid #DCF6FF;
 }
 table.tablesorter td:last-child {
 	 border-right: none;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	border-right: 6px dashed #FFD85B;
-	border-bottom: 2px solid #FFD85B;
+	 border-right: 1px solid #DCF6FF;
+	border-bottom:;
 	padding: 50px 0 50px 30px;
 	font-family: 'KomikaAxisRegular'
 }
@@ -1415,37 +1424,16 @@ table.tablesorter tbody td {
 	vertical-align: top;
 }
 table.tablesorter tbody tr#my-gang td {
-	background-color:#A64D00;
+	background-color:;
 }
 table.tablesorter thead {
-	background: #e68033;
-	background: -moz-linear-gradient(top,  #e68033 48%, #f79838 58%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(48%,#e68033), color-stop(58%,#f79838));
-	background: -webkit-linear-gradient(top,  #e68033 48%,#f79838 58%);
-	background: -o-linear-gradient(top,  #e68033 48%,#f79838 58%);
-	background: -ms-linear-gradient(top,  #e68033 48%,#f79838 58%);
-	background: linear-gradient(to bottom,  #e68033 48%,#f79838 58%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e68033', endColorstr='#f79838',GradientType=0 );
+	background: #74a2c7;
 }
 tr.odd {
-	background: #f4b624;
-	background: -moz-linear-gradient(top,  #f4b624 51%, #ffc74e 52%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#f4b624), color-stop(52%,#ffc74e));
-	background: -webkit-linear-gradient(top,  #f4b624 51%,#ffc74e 52%);
-	background: -o-linear-gradient(top,  #f4b624 51%,#ffc74e 52%);
-	background: -ms-linear-gradient(top,  #f4b624 51%,#ffc74e 52%);
-	background: linear-gradient(to bottom,  #f4b624 51%,#ffc74e 52%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4b624', endColorstr='#ffc74e',GradientType=0 );
+	background: #bbd8ef;
 }
 tr.even {
-	background: #f79525;
-	background: -moz-linear-gradient(top,  #f79525 51%, #ffaf4f 52%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#f79525), color-stop(52%,#ffaf4f));
-	background: -webkit-linear-gradient(top,  #f79525 51%,#ffaf4f 52%);
-	background: -o-linear-gradient(top,  #f79525 51%,#ffaf4f 52%);
-	background: -ms-linear-gradient(top,  #f79525 51%,#ffaf4f 52%);
-	background: linear-gradient(to bottom,  #f79525 51%,#ffaf4f 52%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f79525', endColorstr='#ffaf4f',GradientType=0 );
+	background: #aacde8;
 }
 table.tablesorter thead tr .header {
     background-image: url(../img/table-sorter.png);
@@ -1508,20 +1496,115 @@ li#gangs-total:before {
 	content:"gangs";
 }
 .content{width:100%; height:1128px;  overflow:auto;}
-
 #wrapper {
-	height: 1500px;
+	height: 1550px;
 	width:100%;
+}
+.iosSlider2 {
+	width: 100%;
+	height: 100%;
+}			
+.iosSlider2 .slider2 {
+	width: 2560px !important; /*-webkit browser seems to need this*/
+	height: 1670px;
+}			
+.iosSlider2 .slider2 .item2 {
+	width: 1280px;
+	height:1450px;
+	margin: 0 auto;		
+	position: relative;
+	top: 60px;
+}			
+.iosSlider2 .slider .item2 img {
+	width: 1280px;
+	height:582px;
+	margin: 0 auto;		
+	position: relative;
+	top: 160px;
+}					
+.iosSlider2 .slider .item .text1 {
+	opacity: 0;
+	filter: alpha(opacity:0);
+	padding: 25px 27px;
+	position: relative;
+	right: 0 !important;
+	text-align: center;
+	top: 40px;
+	text-shadow: 0 2px 2px #6B8F98;
+}			
+.iosSlider .slider .item .text1 span{
+	color: #fff;
+	font-size: 6em;
+	padding: 0 8px;
+	font-family:KomikaTitleAxisRegular;
+	white-space:nowrap
+}
+.iosSlider2 .slider2 .item .text2 {			
+	text-shadow: 0 2px 2px #6B8F98;
+	opacity: 0;
+	filter: alpha(opacity:0);
+	padding: 25px 27px;
+	position: relative;
+	right: 0 !important;
+	text-align: center;
+	top: 80px;	
+}
+.iosSlider2 .slider .item .text2 span {
+	color: #fff;
+	font-size: 6em;
+	font-family: KomikaTitleAxisRegular;
+	white-space:nowrap
+}
+.iosSliderButtons2 {
+    height: 3em;
+    left: 50%;
+    margin-left: -85px;
+    position: absolute;
+    top: 330px;
+    width: 170px;
+}
+.iosSliderButtons2 .button2 {
+	opacity: 0.45;
+	filter: alpha(opacity:45);	
+	border-radius: 3em;
+	color: #999;
+	-moz-border-radius: 3em;
+	-ms-border-radius: 3em;
+	-o-border-radius: 3em;
+	-webkit-border-radius: 3em;
+	border-radius: 3em;
+	display: inline-block;
+	margin: 0 1.5em;
+	overflow: hidden;
+	text-index: -100em;
+	width: 3em;
+	height: 3em;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #9fcde6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#9fcde6));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#9fcde6 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#9fcde6 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#9fcde6 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#9fcde6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#9fcde6',GradientType=0 );
+	border-radius: 3em 3em 3em 3em;
+	box-shadow: 0 5px 1px #608FB0;
+}
+.iosSliderButtons2 .selected2 {
+	background: #DE5B1A;
+	box-shadow:none;
+	position: relative;
+	opacity: 1;
+	filter: alpha(opacity:100);			
+}
+#scroller, #scroller2  {
+	padding-right: 10px;
+	height: 1200px;
+	width: 80%;
+	overflow: auto;
+	margin: 0 auto;
 
 }
-
-/*#scroller {
-	padding-right: 10px;
-	height: 1500px;
-	width: 100%;
-	overflow: auto;
-  	margin-bottom:20px;
-}*/
 
 
 

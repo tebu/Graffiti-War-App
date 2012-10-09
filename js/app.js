@@ -118,6 +118,75 @@ $(document).ready(function() {
 	
 });
 
+// iosSlider - rotating banner (http://www.iosscripts.com/iosslider/)
+$(document).ready(function() {
+
+	$('.iosSlider2').iosSlider({
+		scrollbar: false,
+		snapToChildren: true,
+		snapSlideCenter: true,
+		desktopClickDrag: true,
+		keyboardControls: true,
+		scrollbarLocation: 'top',
+		scrollbarMargin: '10px 10px 0 10px',
+		scrollbarBorderRadius: '0',
+		responsiveSlides: true,
+		navSlideSelector: $('.iosSliderButtons2 .button2'),
+		infiniteSlider: false,
+		startAtSlide: '1',
+		onSlideChange: slideContentChange,
+		onSlideComplete: slideContentComplete,
+		onSliderLoaded: slideContentLoaded
+	});
+	
+	function slideContentChange(args) {
+		
+		/* indicator */
+		$(args.sliderObject).parent().find('.iosSliderButtons2 .button2').removeClass('selected2');
+		$(args.sliderObject).parent().find('.iosSliderButtons2 .button2:eq(' + args.currentSlideNumber + ')').addClass('selected2');
+		
+	}
+	
+	function slideContentComplete(args) {
+		
+		/* animation */
+		$(args.sliderObject).find('.text1, .text2').attr('style', '');
+		
+		$(args.currentSlideObject).children('.text1').animate({
+			right: '100px',
+			opacity: '1'
+		}, 400, 'easeOutQuint');
+		
+		$(args.currentSlideObject).children('.text2').delay(200).animate({
+			right: '50px',
+			opacity: '1'
+		}, 400, 'easeOutQuint');
+		
+	}
+	
+	function slideContentLoaded(args) {
+		
+		/* animation */
+		$(args.sliderObject).find('.text1, .text2').attr('style', '');
+		
+		$(args.currentSlideObject).children('.text1').animate({
+			right: '100px',
+			opacity: '1'
+		}, 400, 'easeOutQuint');
+		
+		$(args.currentSlideObject).children('.text2').delay(200).animate({
+			right: '50px',
+			opacity: '1'
+		}, 400, 'easeOutQuint');
+		
+		/* indicator */
+		$(args.sliderObject).parent().find('.iosSliderButtons2 .button2').removeClass('selected2');
+		$(args.sliderObject).parent().find('.iosSliderButtons2 .button2:eq(' + args.currentSlideNumber + ')').addClass('selected2');
+		
+	}
+	
+});
+
 /** Leaderboard **/
 $(document).ready(function() { 
     // call the tablesorter plugin 
