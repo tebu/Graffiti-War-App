@@ -31,8 +31,8 @@
 <script type="text/javascript" src="js/libs/jquery.nicescroll.min.js"></script>
 <script>
   $(document).ready(function() {  
-	$("#scroller").niceScroll({cursorcolor:"#DE5B1A"});
-	$("#scroller2").niceScroll({cursorcolor:"#DE5B1A"});
+	$("#scroller").niceScroll({cursorcolor:"#B18EB8", cursorborder:"transparent", cursoropacitymax:"0"});
+	$("#scroller2").niceScroll({cursorcolor:"#B18EB8", cursorborder:"transparent", cursoropacitymax:"0"});
 }); 
 </script>
 
@@ -48,10 +48,8 @@
 
 			<div id="main" role="main">
             
-            	<a href="leaderboard-menu.html"><div id="go_back">Back</div></a>
-            
-           		     
-                                 
+            	<a href="index.html"><div id="go_back">Back</div></a>
+                                
                 <div class = 'iosSlider2'>
                     
                         <div class = 'slider2'>
@@ -67,7 +65,8 @@
                                                 <th class="header place">#</th> 
                                                 <th>Player</th> 
                                                 <th class="header tags-total">Tags</th> 
-                                                <th class="header erased-total">Erased</th> 
+                                                <th class="header erased-total">Erased</th>
+                                                <th class="header sum-total">Total</th>  
                                             </tr> 
                                             </thead> 
                                             <tbody> 
@@ -75,75 +74,147 @@
                                                 <td>01.</td> 
                                                 <td>Bobby</td> 
                                                 <td>0205</td> 
-                                                <td>0147</td> 
+                                                <td>0147</td>
+                                                <td>0352</td> 
                                             </tr> 
                                             <tr class="even"> 
                                                 <td>02.</td> 
                                                 <td>Bruce</td> 
                                                 <td>0191</td> 
-                                                <td>0135</td> 
+                                                <td>0135</td>
+                                                <td>0326</td> 
                                             </tr> 
                                             <tr class="odd"> 
                                                 <td>03.</td> 
                                                 <td>Billy</td> 
                                                 <td>0189</td> 
-                                                <td>0139</td> 
+                                                <td>0131</td>
+                                                <td>0320</td> 
                                             </tr> 
                                             <tr class="even"> 
                                                 <td>04.</td> 
                                                 <td>Tommy</td> 
                                                 <td>0184</td> 
-                                                <td>0111</td> 
+                                                <td>0121</td>
+                                                <td>0305</td> 
                                             </tr>
                                             <tr class="odd"> 
                                                 <td>05.</td> 
                                                 <td>Brad</td> 
                                                 <td>0172</td> 
-                                                <td>0099</td> 
+                                                <td>0129</td>
+                                                <td>0301</td> 
                                             </tr> 
                                             <tr class="even"> 
                                                 <td>06.</td> 
                                                 <td>Peggy</td> 
-                                                <td>0144</td> 
-                                                <td>0104</td> 
+                                                <td>0171</td> 
+                                                <td>0124</td>
+                                                <td>0295</td> 
                                             </tr> 
                                             <tr class="odd"> 
                                                 <td>07.</td> 
                                                 <td>Robby</td> 
-                                                <td>0143</td> 
-                                                <td>0074</td> 
+                                                <td>0193</td> 
+                                                <td>0100</td>
+                                                <td>0293</td>
                                             </tr> 
                                             <tr class="even"> 
                                                 <td>08.</td> 
                                                 <td>Maggie</td> 
-                                                <td>0129</td> 
-                                                <td>0100</td> 
+                                                <td>0120</td> 
+                                                <td>0161</td>
+                                                <td>0281</td> 
                                             </tr>
                                             <tr class="odd"> 
                                                 <td>09.</td> 
                                                 <td>George</td> 
-                                                <td>0114</td> 
-                                                <td>0039</td> 
+                                                <td>0115</td> 
+                                                <td>0100</td>
+                                                <td>0215</td> 
                                             </tr> 
                                             <tr class="even"> 
                                                 <td>10.</td> 
                                                 <td>Paul</td> 
-                                                <td>0107</td> 
-                                                <td>0110</td> 
+                                                <td>099</td> 
+                                                <td>097</td>
+                                                <td>0196</td> 
                                             </tr> 
-                                            <tr class="odd" id="my-gang"> 
-                                                <td>22.</td> 
-                                                <td>Me</td> 
-                                                <td>0096</td> 
-                                                <td>0056</td> 
-                                            </tr>   
+                                            <tr class="odd" id="myself"> 
+                                                <td>11.</td> 
+                                                <td>You</td> 
+                                                <td>0120</td> 
+                                                <td>0070</td>
+                                                <td>0190</td> 
+                                            </tr>
+                                            <tr class="even"> 
+                                                <td>12.</td> 
+                                                <td>Lucy</td> 
+                                                <td>0110</td> 
+                                                <td>075</td>
+                                                <td>0185</td> 
+                                            </tr> 
+                                            <tr class="odd"> 
+                                                <td>13.</td> 
+                                                <td>Alex</td> 
+                                                <td>050</td> 
+                                                <td>0100</td>
+                                                <td>0150</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>14.</td> 
+                                                <td>Ted</td> 
+                                                <td>070</td> 
+                                                <td>077</td>
+                                                <td>0147</td> 
+                                            </tr>
+                                            <tr class="odd"> 
+                                                <td>15.</td> 
+                                                <td>Steven</td> 
+                                                <td>077</td> 
+                                                <td>068</td>
+                                                <td>0145</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>16.</td> 
+                                                <td>Liz</td> 
+                                                <td>030</td> 
+                                                <td>0110</td>
+                                                <td>0140</td> 
+                                            </tr> 
+                                            <tr class="odd"> 
+                                                <td>17.</td> 
+                                                <td>Ralph</td> 
+                                                <td>068</td> 
+                                                <td>0068</td>
+                                                <td>0136</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>18.</td> 
+                                                <td>Amanda</td> 
+                                                <td>0100</td> 
+                                                <td>026</td>
+                                                <td>0126</td> 
+                                            </tr>
+                                            <tr class="odd"> 
+                                                <td>19.</td> 
+                                                <td>Kelly</td> 
+                                                <td>090</td> 
+                                                <td>030</td>
+                                                <td>0120</td> 
+                                            </tr> 
+                                            <tr class="even"> 
+                                                <td>20.</td> 
+                                                <td>Mark</td> 
+                                                <td>057</td> 
+                                                <td>033</td>
+                                                <td>090</td> 
+                                            </tr>      
                                             </tbody> 
                                         </table>
             
                                     </div>
-                            </div>
-    
-            
+                            </div>            
                             
                             <div class = 'item2' id = 'item22'>
                             <h1>Leaderboards<span>Which <em>gang</em> owns them all?</span></h1> 
@@ -153,138 +224,116 @@
                                     <thead> 
                                     <tr> 
                                         <th class="header place">#</th> 
-                                        <th>Gang</th> 
-                                        <th class="header tags-total">Tags</th> 
-                                        <th class="header erased-total">Erased</th> 
+                                        <th class="header gangs">Gang</th> 
+                                        <th class="header tags-total">Avg</th> 
                                     </tr> 
                                     </thead> 
                                     <tbody> 
                                     <tr class="odd"> 
                                         <td>01.</td> 
                                         <td>Kadunvaltaajat</td> 
-                                        <td>0205</td> 
-                                        <td>0147</td> 
+                                        <td>0125</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>02.</td> 
                                         <td>Taistelutoverit</td> 
-                                        <td>0191</td> 
-                                        <td>0135</td> 
+                                        <td>0123</td> 
                                     </tr> 
                                     <tr class="odd"> 
                                         <td>03.</td> 
                                         <td>Kannuttajat</td> 
-                                        <td>0189</td> 
-                                        <td>0139</td> 
+                                        <td>0121</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>04.</td> 
                                         <td>New Wave</td> 
-                                        <td>0184</td> 
-                                        <td>0111</td> 
+                                        <td>0116</td> 
                                     </tr>
                                     <tr class="odd"> 
                                         <td>05.</td> 
                                         <td>The Rebels</td> 
                                         <td>0172</td> 
-                                        <td>0099</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>06.</td> 
                                         <td>TagzCrew</td> 
-                                        <td>0144</td> 
-                                        <td>0104</td> 
+                                        <td>0111</td> 
                                     </tr> 
                                     <tr class="odd"> 
                                         <td>07.</td> 
                                         <td>Kings_of_Graffities</td> 
-                                        <td>0143</td> 
-                                        <td>0074</td> 
+                                        <td>0107</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>08.</td> 
                                         <td>theElementz</td> 
-                                        <td>0129</td> 
-                                        <td>0100</td> 
+                                        <td>0105</td> 
                                     </tr>
                                     <tr class="odd"> 
                                         <td>09.</td> 
                                         <td>StreetArtKings</td> 
-                                        <td>0114</td> 
-                                        <td>0039</td> 
+                                        <td>0101</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>10.</td> 
                                         <td>Tags Master Squad</td> 
-                                        <td>0107</td> 
-                                        <td>0110</td> 
+                                        <td>0099</td> 
                                     </tr> 
-                                    <tr class="odd" id="my-gang"> 
+                                    <tr class="odd" id="my_gang"> 
                                         <td>11.</td> 
-                                        <td>My Gang</td> 
+                                        <td>Your Gang</td> 
                                         <td>0096</td> 
-                                        <td>0056</td> 
                                     </tr>
                                     <tr class="even"> 
                                         <td>12.</td> 
                                         <td>TagzCrew</td> 
-                                        <td>0144</td> 
-                                        <td>0104</td> 
+                                        <td>0187</td> 
                                     </tr> 
                                     <tr class="odd"> 
                                         <td>13.</td> 
                                         <td>Kings_of_Graffities</td> 
                                         <td>0143</td> 
-                                        <td>0074</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>14.</td> 
                                         <td>theElementz</td> 
                                         <td>0129</td> 
-                                        <td>0100</td> 
                                     </tr>
                                     <tr class="odd"> 
                                         <td>15.</td> 
                                         <td>GraffitiesBoyz</td> 
-                                        <td>0114</td> 
-                                        <td>0039</td> 
+                                        <td>0067</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>16.</td> 
                                         <td>AwsomeGang</td> 
-                                        <td>0107</td> 
-                                        <td>0110</td> 
+                                        <td>0058</td> 
                                     </tr> 
                                     <tr class="odd"> 
                                         <td>17.</td> 
                                         <td>CoolTaggers</td> 
-                                        <td>0096</td> 
-                                        <td>0056</td> 
+                                        <td>00045</td> 
                                     </tr>
                                      <tr class="even"> 
                                         <td>18.</td> 
                                         <td>Rev0lution</td> 
-                                        <td>0129</td> 
-                                        <td>0100</td> 
+                                        <td>0036</td> 
                                     </tr>
                                     <tr class="odd"> 
                                         <td>19.</td> 
                                         <td>ThaCitizens</td> 
-                                        <td>0114</td> 
-                                        <td>0039</td> 
+                                        <td>0021</td> 
                                     </tr> 
                                     <tr class="even"> 
                                         <td>20.</td> 
                                         <td>OuluDudez</td> 
-                                        <td>0107</td> 
-                                        <td>0110</td> 
+                                        <td>0015</td> 
                                     </tr>           
                                     </tbody> 
                                     </table>
     
                                 </div>
-                            </div>
-                            
+                            </div>                           
                         
                         </div>
                         <!--! end of #slider2 -->
@@ -297,7 +346,12 @@
                 </div>
                <!--! end of .ioSlider2 -->
             	
+                 <div id="shadow"></div>
                  
+                 <ul id="players-count">
+                     <li>Gangs <span>202</span></li>
+                     <li>Players <span>876</span></li>
+                 </ul>
 			        
 			</div>
         	<!--! end of #main -->
@@ -311,7 +365,7 @@
 <script src="js/fonts/cufon-yui.js"></script>
 <script src="js/fonts/MisterEarl_BT_400.font.js"></script> 
 <script type="text/javascript">
-	Cufon.replace('h1, h1 span, #myTable, #myTable2', {
+	Cufon.replace('h1, h1 span, #myTable, #myTable2, #players-count', {
 		textShadow: '0 2px 2px #6B8F98'
 	});
 		Cufon.replace('em', {

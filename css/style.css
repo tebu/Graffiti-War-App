@@ -1324,7 +1324,7 @@ span#sprayed-avg, span#erased-avg, span#ranking {
 }
 
 
-/* ==|== leaderboard-gangs.html & leaderboard-players.html =====================================================
+/* ==|== leaderboards.html =====================================================
   
    ========================================================================== */
 
@@ -1356,7 +1356,7 @@ span#sprayed-avg, span#erased-avg, span#ranking {
 	font-size: 70%;
 }
 .container_leaderboard h1 em {
-	color:#DE5B1A;
+	color:#B18EB8;
 	text-shadow: none !important
 }
 #go_back {
@@ -1370,12 +1370,12 @@ span#sprayed-avg, span#erased-avg, span#ranking {
 	width: 164px;
     line-height: 4em;
 	font-family: KomikaAxisRegular;
-	margin-left: -82px;
+	z-index: 100;
     position: absolute;
 	text-align: center;
     text-decoration: none;
-	left: 50%;
-	bottom: 5%;	
+	left: 40px;
+	top: 50px;	
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -1401,13 +1401,13 @@ table.tablesorter tr {
 }
 table.tablesorter td {
 	 padding: 45px 30px !important;
-	 border-right: 1px solid #DCF6FF;
+	 border-right: 1px solid #B4D4F2;
 }
 table.tablesorter td:last-child {
 	 border-right: none;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	 border-right: 1px solid #DCF6FF;
+	 border-right: 1px solid #B4D4F2;
 	border-bottom:;
 	padding: 50px 0 50px 30px;
 	font-family: 'KomikaAxisRegular'
@@ -1427,7 +1427,13 @@ table.tablesorter tbody tr#my-gang td {
 	background-color:;
 }
 table.tablesorter thead {
-	background: #74a2c7;
+	background: #93caf9;
+	background: -moz-linear-gradient(top,  #93caf9 54%, #80b5e0 54%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(54%,#93caf9), color-stop(54%,#80b5e0));
+	background: -webkit-linear-gradient(top,  #93caf9 54%,#80b5e0 54%);
+	background: -o-linear-gradient(top,  #93caf9 54%,#80b5e0 54%);
+	background: -ms-linear-gradient(top,  #93caf9 54%,#80b5e0 54%);
+	background: linear-gradient(to bottom,  #93caf9 54%,#80b5e0 54%);
 }
 tr.odd {
 	background: #bbd8ef;
@@ -1448,19 +1454,23 @@ table.tablesorter thead tr .headerSortDown {
 	background-image: url(../img/table-desc.png);
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-	background-color: #DE5B1A;
+	background-color: #B18EB8;
 }
 th.header {
 	text-align: left;
+	white-space:nowrap;
 }
 .erased-total  {
-	width: 25% !important
+	width: 20% !important
 }
 .tags-total {
-	width: 25% !important
+	width: 20% !important
 }
 .place  {
 	width: 15% !important
+}
+.gangs  {
+	width: 25% !important
 }
 ul#attendance {	
 	position: relative;
@@ -1505,7 +1515,7 @@ li#gangs-total:before {
 	height: 100%;
 }			
 .iosSlider2 .slider2 {
-	width: 2560px !important; /*-webkit browser seems to need this*/
+	width: 3000px !important; /*-webkit browser seems to need this*/
 	height: 1670px;
 }			
 .iosSlider2 .slider2 .item2 {
@@ -1591,7 +1601,7 @@ li#gangs-total:before {
 	box-shadow: 0 5px 1px #608FB0;
 }
 .iosSliderButtons2 .selected2 {
-	background: #DE5B1A;
+	background: #B18EB8;
 	box-shadow:none;
 	position: relative;
 	opacity: 1;
@@ -1600,13 +1610,25 @@ li#gangs-total:before {
 #scroller, #scroller2  {
 	padding-right: 10px;
 	height: 1200px;
-	width: 80%;
+	width: 88%;
 	overflow: auto;
 	margin: 0 auto;
-
 }
 
-
+#shadow {
+	background:url(../img/shadow.png) center no-repeat;
+	width: 1155px;
+	height: 117px;
+	margin: 0 auto;
+	position:relative;
+	top: -124px;
+	z-index: 1000;
+	left: -6px
+}
+#myself, #my_gang {
+	background: #B18EB8
+	
+}
 
 
 /*#scroller ul {
@@ -1695,6 +1717,25 @@ span.check {
 	color: #8DF29D;
 	font-size: 2em;
 }
+ul#players-count {
+	position: relative;
+	top: -50px;
+	width: 62%;
+	margin: 0 auto;	
+}
+ul#players-count li {
+	float: left;
+	font-size: 5em;
+	margin: 0 100px 0 0;
+}
+ul#players-count li span {
+	padding: 5px 40px;
+	background: #B18EB8;
+}
+
+
+
+
 /*
  * Media queries for responsive design github.com/h5bp/mobile-boilerplate/wiki/The-Style
  */
